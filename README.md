@@ -321,25 +321,120 @@ http://localhost:3000
 
 ## 📁 7. Project Structure
 
-```
 ai-insurance-agent-dev-phase1/
 │
-├── backend/
-│   ├── app/
-│   │   ├── core/
-│   │   ├── db/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── ai/
-│   │   └── vectorstore/
+├── 📄 SETUP.md
+├── 📄 .gitignore
 │
-├── frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   ├── components/
-│   │   ├── hooks/
-│   │   ├── lib/
-│   │   └── types/
+├── 🖥️ backend/
+│   ├── 📄 .env.example
+│   ├── 📄 AI_README.md
+│   ├── 📄 requirements.txt
+│   │
+│   ├── 📦 app/
+│   │   ├── 📄 main.py                # FastAPI entry point
+│   │
+│   │   ├── ⚙️ core/
+│   │   │   ├── config.py             # Environment & settings
+│   │   │   ├── security.py           # JWT & password hashing
+│   │   │   ├── deps.py               # Auth dependency (current user)
+│   │   │
+│   │   ├── 🗄️ db/
+│   │   │   ├── mongo.py              # MongoDB connection
+│   │   │   ├── init_indexes.py       # DB indexing
+│   │   │
+│   │   ├── 🧾 models/
+│   │   │   ├── auth.py               # Login model
+│   │   │   ├── user.py               # User schema
+│   │   │   ├── chat.py               # Chat models
+│   │   │   ├── upload.py             # Upload schema
+│   │   │
+│   │   ├── 🌐 routes/
+│   │   │   ├── auth.py               # /auth APIs
+│   │   │   ├── uploads.py            # Upload pipeline APIs
+│   │   │   ├── chat.py               # Chat APIs
+│   │   │
+│   │   ├── 🤖 ai/
+│   │   │   ├── documents.py          # Metadata schema
+│   │   │   ├── processor.py          # OCR + text extraction
+│   │   │   ├── pdf_to_word.py        # PDF → DOCX conversion
+│   │   │   ├── orchestrator.py       # AI router
+│   │   │
+│   │   │   ├── 🧠 agents/
+│   │   │   │   ├── base.py           # Base agent logic
+│   │   │   │   ├── discharge_agent.py # Medical Q&A agent
+│   │   │   │   ├── diet_agent.py     # Diet planning agent
+│   │   │   │   ├── bill_agent.py     # Bill validation (placeholder)
+│   │   │   │   ├── medicine_agent.py # Medicine info (placeholder)
+│   │   │
+│   │   │   ├── 📊 vectorstore/
+│   │   │   │   ├── embeddings.py     # Text → vectors
+│   │   │   │   ├── store.py          # FAISS index management
+│   │   │
+│   │   │   ├── 🌐 scrapers/
+│   │   │   │   ├── pharmacy.py       # Medicine price scraper
+│   │
+│   │
+│   ├── 📁 data/                     # (Generated at runtime)
+│   │   ├── uploads/                 # Uploaded PDFs
+│   │   ├── vectors/                 # FAISS indexes
+│   │
+│   ├── 🐍 venv/                     # Virtual environment
+│
+│
+├── 🌐 frontend/
+│   ├── 📄 package.json
+│   ├── 📄 next.config.js
+│   ├── 📄 tailwind.config.ts
+│   ├── 📄 tsconfig.json
+│   │
+│   ├── 📁 src/
+│   │   ├── 🎨 app/
+│   │   │   ├── globals.css
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx              # Redirect → login
+│   │   │   ├── not-found.tsx
+│   │   │
+│   │   │   ├── 🔐 login/
+│   │   │   │   ├── page.tsx
+│   │   │
+│   │   │   ├── 📝 register/
+│   │   │   │   ├── page.tsx
+│   │   │
+│   │   │   ├── 📊 dashboard/
+│   │   │   │   ├── layout.tsx        # Sidebar layout
+│   │   │   │
+│   │   │   │   ├── 📂 upload/
+│   │   │   │   │   ├── page.tsx
+│   │   │   │
+│   │   │   │   ├── 📁 files/
+│   │   │   │   │   ├── page.tsx      # File list
+│   │   │   │   │
+│   │   │   │   │   ├── [id]/
+│   │   │   │   │   │   ├── page.tsx          # Chat UI
+│   │   │   │   │   │   ├── content/page.tsx  # View PDF
+│   │   │   │   │   │   ├── extracted/page.tsx # Extracted text
+│   │   │
+│   │   ├── 🧩 components/
+│   │   │   ├── Sidebar.tsx
+│   │   │   ├── ProtectedRoute.tsx
+│   │   │
+│   │   ├── 🔔 context/
+│   │   │   ├── ToastContext.tsx
+│   │   │
+│   │   ├── 🪝 hooks/
+│   │   │   ├── useAuth.ts
+│   │   │
+│   │   ├── 🔗 lib/
+│   │   │   ├── api.ts                # Axios client
+│   │   │
+│   │   ├── 🧾 types/
+│   │   │   ├── index.ts              # TypeScript interfaces
+│
+│
+├── 📁 GIG/                          # Reference implementation
+│
+└── 📁 README.md                     # Your GitHub README
 ```
 
 ---
