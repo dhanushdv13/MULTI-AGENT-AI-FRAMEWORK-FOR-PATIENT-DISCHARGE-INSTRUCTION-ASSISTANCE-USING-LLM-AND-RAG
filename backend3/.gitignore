@@ -1,0 +1,26 @@
+# Python virtual env
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# System files
+.DS_Store
+agent_memory.db
+agent_memory.db-shm
+agent_memory.db-wal
+
+# Logs
+*.log
+
+# Zip files
+*.zip

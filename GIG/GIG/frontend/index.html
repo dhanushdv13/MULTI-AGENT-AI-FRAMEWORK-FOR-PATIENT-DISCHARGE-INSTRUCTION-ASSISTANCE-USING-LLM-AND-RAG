@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login/Signup Screen -->
+        <div id="auth-screen" class="screen active">
+            <div class="auth-box">
+                <h1>Healthcare Assistant</h1>
+                <p class="subtitle">AI-powered post-discharge support</p>
+                
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('login')">Login</button>
+                    <button class="tab" onclick="switchTab('signup')">Sign Up</button>
+                </div>
+
+                <form id="login-form" class="auth-form active">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+
+                <form id="signup-form" class="auth-form">
+                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+                </form>
+
+                <div id="auth-message" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Main App Screen -->
+        <div id="app-screen" class="screen">
+            <header>
+                <h1>Healthcare Assistant</h1>
+                <div class="user-info">
+                    <span id="user-name"></span>
+                    <button onclick="logout()" class="btn-logout">Logout</button>
+                </div>
+            </header>
+
+            <div class="main-content">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="nav-section">
+                        <button class="nav-btn active" onclick="showView('chat')">
+                            <span>💬</span> Chat
+                        </button>
+                        <button class="nav-btn" onclick="showView('documents')">
+                            <span>📄</span> Documents
+                        </button>
+                        <button class="nav-btn" onclick="showView('upload')">
+                            <span>⬆️</span> Upload
+                        </button>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>Quick Questions</h3>
+                        <button class="quick-btn" onclick="askQuestion('Explain my diagnosis in simple terms')">
+                            🩺 Explain Diagnosis
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('Check my hospital bill for overcharging')">
+                            💰 Check Bill
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('Compare prices for my medicines')">
+                            💊 Medicine Prices
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('Create a meal plan for my condition')">
+                            🍎 Diet Plan
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Chat View -->
+                <main id="chat-view" class="view active">
+                    <div class="chat-container">
+                        <div id="chat-messages" class="chat-messages">
+                            <div class="welcome-message">
+                                <h2>Welcome!</h2>
+                                <p>I'm your AI healthcare assistant. I can help you with:</p>
+                                <ul>
+                                    <li>Understanding your discharge summary</li>
+                                    <li>Validating hospital bills</li>
+                                    <li>Finding best medicine prices</li>
+                                    <li>Creating personalized diet plans</li>
+                                </ul>
+                                <p>Upload your documents and ask me anything!</p>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <input type="text" id="chat-input" placeholder="Ask me anything..." />
+                            <button onclick="sendMessage()" class="btn-send">Send</button>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Documents View -->
+                <main id="documents-view" class="view">
+                    <h2>My Documents</h2>
+                    <div id="documents-list" class="documents-grid">
+                        <p class="empty-state">No documents yet. Upload some to get started!</p>
+                    </div>
+                </main>
+
+                <!-- Document Content Viewer (overlay) -->
+                <div id="doc-viewer-overlay" class="overlay" style="display:none" onclick="closeDocViewer(event)">
+                    <div class="doc-viewer-panel" onclick="event.stopPropagation()">
+                        <div class="doc-viewer-header">
+                            <h3 id="doc-viewer-title">Document Content</h3>
+                            <button onclick="closeDocViewer()" class="btn-close">X</button>
+                        </div>
+                        <div id="doc-viewer-content" class="doc-viewer-body">
+                            Loading...
+                        </div>
+                        <div class="doc-viewer-footer">
+                            <button id="doc-viewer-download-btn" onclick="downloadDocWord()" class="btn-primary">
+                                Download as Word
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upload View -->
+                <main id="upload-view" class="view">
+                    <h2>Upload Documents</h2>
+                    <p class="upload-hint">You can upload both documents simultaneously — they process in parallel!</p>
+                    <div class="upload-container">
+                        <div class="upload-box">
+                            <h3>📋 Discharge Summary</h3>
+                            <input type="file" id="discharge-file" accept=".pdf" style="display:none">
+                            <button onclick="document.getElementById('discharge-file').click()" class="btn-upload">
+                                Choose PDF File
+                            </button>
+                            <button id="discharge-upload-btn" onclick="uploadDocument('discharge')" class="btn-primary">Upload</button>
+                            <div id="discharge-status" class="upload-status"></div>
+                            <div id="discharge-progress-container" class="progress-container" style="display:none">
+                                <div class="progress-bar">
+                                    <div id="discharge-progress-bar" class="progress-fill"></div>
+                                </div>
+                                <div id="discharge-progress-text" class="progress-text">0%</div>
+                            </div>
+                        </div>
+
+                        <div class="upload-box">
+                            <h3>🏥 Hospital Bill</h3>
+                            <input type="file" id="bill-file" accept=".pdf" style="display:none">
+                            <button onclick="document.getElementById('bill-file').click()" class="btn-upload">
+                                Choose PDF File
+                            </button>
+                            <button id="bill-upload-btn" onclick="uploadDocument('bill')" class="btn-primary">Upload</button>
+                            <div id="bill-status" class="upload-status"></div>
+                            <div id="bill-progress-container" class="progress-container" style="display:none">
+                                <div class="progress-bar">
+                                    <div id="bill-progress-bar" class="progress-fill"></div>
+                                </div>
+                                <div id="bill-progress-text" class="progress-text">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AI Insurance Agent - Complete Project Explanation</title>
+<style>
+    @page { margin: 1.5cm; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        line-height: 1.6;
+        color: #1a1a2e;
+        max-width: 100%;
+        padding: 20px;
+    }
+    h1 {
+        color: #1a1a2e;
+        border-bottom: 3px solid #4F86ED;
+        padding-bottom: 8px;
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    h2 {
+        color: #2d3748;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 5px;
+        font-size: 17px;
+        margin-top: 25px;
+    }
+    h3 {
+        color: #4F86ED;
+        font-size: 14px;
+        margin-top: 18px;
+    }
+    h4 { font-size: 12px; color: #555; }
+    code {
+        background-color: #f1f5f9;
+        padding: 1px 4px;
+        border-radius: 3px;
+        font-family: 'SF Mono', Menlo, Monaco, monospace;
+        font-size: 10px;
+    }
+    pre {
+        background-color: #1e293b;
+        color: #e2e8f0;
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-size: 9.5px;
+        line-height: 1.5;
+    }
+    pre code {
+        background: none;
+        color: inherit;
+        padding: 0;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12px 0;
+        font-size: 10px;
+    }
+    th {
+        background-color: #4F86ED;
+        color: white;
+        padding: 6px 10px;
+        text-align: left;
+    }
+    td {
+        border: 1px solid #e2e8f0;
+        padding: 5px 10px;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    blockquote {
+        border-left: 3px solid #4F86ED;
+        padding-left: 12px;
+        color: #555;
+        margin: 10px 0;
+    }
+    hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 20px 0;
+    }
+    strong { color: #1a1a2e; }
+    a { color: #4F86ED; }
+    ul, ol { padding-left: 20px; }
+    li { margin-bottom: 3px; }
+</style>
+</head>
+<body>
+<h1 id="ai-insurance-agent-complete-project-explanation">AI Insurance Agent — Complete Project Explanation</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+<li>Project Overview</li>
+<li>Architecture &amp; How Everything Connects</li>
+<li>Backend Deep Dive (Every File Explained)</li>
+<li>Frontend Deep Dive (Every File Explained)</li>
+<li>Database Layer</li>
+<li>AI Pipeline — The Brain</li>
+<li>How to Run the Project</li>
+<li>Complete File Tree</li>
+</ol>
+
+<hr />
+
+<h2 id="1-project-overview">1. Project Overview</h2>
+
+<p>This is a <strong>Medical Discharge Document Analysis</strong> web application called <strong>"Dischargo"</strong>. It allows patients or hospital staff to:</p>
+
+<ol>
+<li><strong>Upload</strong> hospital discharge PDFs (bills, summaries, reports)</li>
+<li>The AI <strong>reads the PDF</strong> using OCR (Optical Character Recognition)</li>
+<li>The text is <strong>converted into vector embeddings</strong> (numbers the AI can search)</li>
+<li>Users can <strong>chat with the AI</strong> about their documents — asking questions like "What medicines were prescribed?" or "Create a diet plan based on my condition"</li>
+</ol>
+
+<p>The system uses a <strong>Multi-Agent Architecture</strong>: different specialized AI "agents" handle different types of questions (discharge analysis, diet planning, bill validation, etc.).</p>
+
+<h3 id="tech-stack">Tech Stack</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Layer</th>
+  <th>Technology</th>
+  <th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Frontend</td>
+  <td>Next.js 14 + React 18 + TypeScript</td>
+  <td>User interface</td>
+</tr>
+<tr>
+  <td>Styling</td>
+  <td>Tailwind CSS</td>
+  <td>CSS utility framework</td>
+</tr>
+<tr>
+  <td>State Mgmt</td>
+  <td>Zustand + React Query</td>
+  <td>Client-side state</td>
+</tr>
+<tr>
+  <td>HTTP Client</td>
+  <td>Axios</td>
+  <td>API calls to backend</td>
+</tr>
+<tr>
+  <td>Backend</td>
+  <td>FastAPI (Python)</td>
+  <td>REST API server</td>
+</tr>
+<tr>
+  <td>Database</td>
+  <td>MongoDB + Motor (async driver)</td>
+  <td>Data storage</td>
+</tr>
+<tr>
+  <td>AI/LLM</td>
+  <td>Google Gemini (via LangChain)</td>
+  <td>Chat responses</td>
+</tr>
+<tr>
+  <td>Embeddings</td>
+  <td>Sentence-Transformers (all-MiniLM-L6-v2)</td>
+  <td>Text → vectors</td>
+</tr>
+<tr>
+  <td>Vector DB</td>
+  <td>FAISS (Facebook AI Similarity Search)</td>
+  <td>Similarity search</td>
+</tr>
+<tr>
+  <td>OCR</td>
+  <td>RapidOCR + PyMuPDF</td>
+  <td>Reading scanned PDFs</td>
+</tr>
+<tr>
+  <td>Auth</td>
+  <td>JWT + bcrypt</td>
+  <td>Security</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="2-architecture-how-everything-connects">2. Architecture — How Everything Connects</h2>
+
+<pre><code>┌─────────────────────┐         ┌──────────────────────┐
+│   FRONTEND (Next.js)│  HTTP   │   BACKEND (FastAPI)   │
+│   localhost:3000     │◄──────►│   localhost:8000       │
+│                      │        │                        │
+│  Login Page ─────────┼──POST──┼─► /auth/login          │
+│  Register Page ──────┼──POST──┼─► /auth/register       │
+│  Upload Page ────────┼──POST──┼─► /uploads/             │
+│  Chat Interface ─────┼──POST──┼─► /chat/{vector_id}    │
+│  File List ──────────┼──GET───┼─► /uploads/             │
+└─────────────────────┘        └──────────┬───────────────┘
+                                          │
+                          ┌───────────────┼───────────────┐
+                          ▼               ▼               ▼
+                    ┌──────────┐   ┌───────────┐   ┌──────────┐
+                    │ MongoDB  │   │ FAISS     │   │ Gemini   │
+                    │ Database │   │ Vectors   │   │ LLM API  │
+                    └──────────┘   └───────────┘   └──────────┘
+</code></pre>
+
+<p><strong>The flow in plain English:</strong>
+1. User opens the website (Frontend) → sees Login page
+2. User logs in → Frontend sends credentials to Backend → Backend checks MongoDB → returns a JWT token
+3. User uploads a PDF → Backend saves the file, then in the <strong>background</strong>: extracts text (OCR), creates vector embeddings (FAISS), and converts to Word document
+4. User asks a question in chat → Backend searches the vectors for relevant text chunks → sends those chunks + the question to Google Gemini → returns the AI's answer</p>
+
+<hr />
+
+<h2 id="3-backend-deep-dive-every-file-explained">3. Backend Deep Dive — Every File Explained</h2>
+
+<h3 id="31-entry-point-backendappmainpy">3.1 Entry Point: <code>backend/app/main.py</code></h3>
+
+<pre><code>from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.routes import auth, uploads, chat
+from app.db.mongo import db
+from app.db.init_indexes import create_indexes
+
+app = FastAPI(
+    title="Medical Backend API",
+    version="1.0",
+    description="Auth, Uploads, ML-ready APIs"
+)
+
+from app.core import config
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=config.ALLOWED_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.on_event("startup")
+async def startup():
+    await create_indexes(db)
+
+app.include_router(auth.router)
+app.include_router(uploads.router)
+app.include_router(chat.router)
+</code></pre>
+
+<p><strong>Line-by-line explanation:</strong>
+- <code>FastAPI(...)</code> — Creates the web server application. FastAPI auto-generates API documentation at <code>/docs</code>.
+- <code>CORSMiddleware</code> — Without this, your browser would block the frontend (port 3000) from talking to the backend (port 8000). CORS says "these origins are allowed."
+- <code>@app.on_event("startup")</code> — When the server starts, create database indexes (for faster queries).
+- <code>app.include_router(...)</code> — Registers three groups of API endpoints: authentication, file uploads, and chat.</p>
+
+<hr />
+
+<h3 id="32-configuration-backendappcoreconfigpy">3.2 Configuration: <code>backend/app/core/config.py</code></h3>
+
+<pre><code>import os
+from dotenv import load_dotenv
+load_dotenv()
+
+MONGO_URI = os.getenv("MONGO_URI", "")
+JWT_SECRET = os.getenv("JWT_SECRET", "secret")
+JWT_ALGO = "HS256"
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+LLM_MODEL = "gemini-2.5-flash"
+LLM_TEMPERATURE = 0.3
+
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+
+OCR_DPI = 300
+CHUNK_SIZE = 500
+CHUNK_OVERLAP = 100
+</code></pre>
+
+<p><strong>What each setting means:</strong>
+- <code>load_dotenv()</code> — Reads the <code>.env</code> file so secrets aren't hardcoded in code
+- <code>MONGO_URI</code> — Connection string to MongoDB
+- <code>JWT_SECRET</code> — A secret key used to sign authentication tokens (like a password for your passwords)
+- <code>JWT_ALGO = "HS256"</code> — The algorithm used to encrypt JWT tokens
+- <code>GOOGLE_API_KEY</code> — Your API key for Google's Gemini AI
+- <code>LLM_TEMPERATURE = 0.3</code> — Controls creativity (0 = very precise, 1 = very creative)
+- <code>EMBEDDING_MODEL</code> — The model that converts text into numbers (384-dimensional vectors)
+- <code>CHUNK_SIZE / CHUNK_OVERLAP</code> — How documents are split into smaller pieces for processing</p>
+
+<hr />
+
+<h3 id="33-security-backendappcoresecuritypy">3.3 Security: <code>backend/app/core/security.py</code></h3>
+
+<pre><code>from passlib.context import CryptContext
+from jose import jwt, JWTError
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def hash_password(password: str):
+    return pwd_context.hash(password.encode("utf-8"))
+
+def verify_password(password: str, hashed: str):
+    return pwd_context.verify(password.encode("utf-8"), hashed)
+
+def create_token(data: dict, minutes=60):
+    payload = data.copy()
+    payload["exp"] = datetime.utcnow() + timedelta(minutes=minutes)
+    return jwt.encode(payload, config.JWT_SECRET, config.JWT_ALGO)
+
+def decode_token(token: str):
+    try:
+        return jwt.decode(token, config.JWT_SECRET, [config.JWT_ALGO])
+    except JWTError:
+        return None
+</code></pre>
+
+<p><strong>What this does:</strong>
+- <code>hash_password</code> — Takes "mypassword123" and turns it into a scrambled string like "$2b$12$abc...". This is stored in the database. Even if someone steals the database, they can't read passwords.
+- <code>verify_password</code> — Checks if a plain password matches the scrambled version.
+- <code>create_token</code> — Creates a JWT token (a signed string containing the user_id and expiration time). This token is sent to the frontend and included in every subsequent request.
+- <code>decode_token</code> — Reads and verifies a JWT token. If it's expired or tampered with, returns None.</p>
+
+<hr />
+
+<h3 id="34-auth-protection-backendappcoredepspy">3.4 Auth Protection: <code>backend/app/core/deps.py</code></h3>
+
+<pre><code>oauth2 = OAuth2PasswordBearer(tokenUrl="/auth/login")
+
+async def current_user(token: str = Depends(oauth2)):
+    payload = decode_token(token)
+    if not payload:
+        raise HTTPException(401, "Invalid token")
+    user = await users.find_one({"_id": ObjectId(payload["user_id"])})
+    if not user:
+        raise HTTPException(401, "User not found")
+    return user
+</code></pre>
+
+<p><strong>What this does:</strong> This is a "dependency" — a reusable function that runs before any protected API endpoint. When an endpoint has <code>user=Depends(current_user)</code>, FastAPI automatically: extracts the token from the <code>Authorization: Bearer &lt;token&gt;</code> header → decodes it → looks up the user in MongoDB → passes the user object to the endpoint. If anything fails, it returns a 401 Unauthorized error.</p>
+
+<hr />
+
+<h3 id="35-database-backendappdbmongopy">3.5 Database: <code>backend/app/db/mongo.py</code></h3>
+
+<pre><code>from motor.motor_asyncio import AsyncIOMotorClient
+
+client = AsyncIOMotorClient(config.MONGO_URI)
+db = client.medical_db
+
+users = db.users
+uploads = db.uploads
+chat_history = db.chat_history
+</code></pre>
+
+<p><strong>What this does:</strong> Motor is the async MongoDB driver for Python. This creates a connection to MongoDB and defines three <strong>collections</strong> (like tables): <code>users</code>, <code>uploads</code>, and <code>chat_history</code>. These are imported by other files to read/write data.</p>
+
+<h3 id="36-database-indexes-backendappdbinit_indexespy">3.6 Database Indexes: <code>backend/app/db/init_indexes.py</code></h3>
+
+<pre><code>async def create_indexes(db):
+    await db.users.create_index("username", unique=True)
+    await db.users.create_index("email", unique=True)
+    await db.uploads.create_index("user_id")
+    await db.uploads.create_index("vector_status")
+</code></pre>
+
+<p><strong>What this does:</strong> Indexes make database queries faster (like an index in a book). <code>unique=True</code> ensures no two users can have the same username or email.</p>
+
+<hr />
+
+<h3 id="37-data-models-backendappmodels">3.7 Data Models: <code>backend/app/models/</code></h3>
+
+<p>These are <strong>Pydantic models</strong> — they define the shape of data and automatically validate it.</p>
+
+<p><strong>user.py — What user data looks like:</strong></p>
+
+<pre><code>class RegisterUser(BaseModel):
+    full_name: str
+    username: str
+    email: EmailStr      # Validates email format automatically
+    mobile: str
+    age: int
+    gender: str
+    address: Optional[str] = None  # Optional field
+    password: str
+</code></pre>
+
+<p><strong>chat.py — What chat messages look like:</strong></p>
+
+<pre><code>class ChatMessage(BaseModel):     # What the user sends
+    message: str
+
+class ChatResponse(BaseModel):    # What the server returns
+    agent: str                     # Which AI agent answered
+    response: str                  # The answer text
+    vector_id: str                 # Which document was queried
+</code></pre>
+
+<p><strong>upload.py — What upload records look like:</strong></p>
+
+<pre><code>class UploadOut(BaseModel):
+    upload_id: str
+    user_id: str
+    filename: str
+    vector_status: str       # "PROCESSING", "COMPLETED", or "FAILED"
+    vector_id: Optional[str] # Links to the FAISS vector index
+</code></pre>
+
+<hr />
+
+<h3 id="38-routes-backendapproutesauthpy">3.8 Routes: <code>backend/app/routes/auth.py</code></h3>
+
+<pre><code>router = APIRouter(prefix="/auth", tags=["Auth"])
+
+@router.post("/register")
+async def register(data: RegisterUser):
+    doc = {
+        "full_name": data.full_name,
+        "username": data.username,
+        "password": hash_password(data.password),  # NEVER store plain passwords
+        "created_at": datetime.utcnow(),
+    }
+    res = await users.insert_one(doc)
+    return {"user_id": str(res.inserted_id)}
+
+@router.post("/login")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    user = await users.find_one({"username": form_data.username})
+    if not user or not verify_password(form_data.password, user["password"]):
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+    token = create_token({"user_id": str(user["_id"])})
+    return {"access_token": token, "token_type": "bearer"}
+</code></pre>
+
+<p><strong>Register flow:</strong> Receives user data → hashes the password → saves to MongoDB → returns the new user ID.
+<strong>Login flow:</strong> Receives username+password → finds user in DB → verifies password → creates a JWT token → returns it. The frontend stores this token and sends it with every future request.</p>
+
+<hr />
+
+<h3 id="39-routes-backendapproutesuploadspy-most-complex-file">3.9 Routes: <code>backend/app/routes/uploads.py</code> (Most Complex File)</h3>
+
+<p>This file handles the entire file upload pipeline. Key sections:</p>
+
+<p><strong>Upload endpoint (<code>POST /uploads/</code>):</strong>
+1. Generates unique IDs for the upload and its vector index
+2. Saves the uploaded file to <code>data/uploads/</code>
+3. Creates a database record with status "PROCESSING"
+4. Triggers a <strong>background task</strong> (so the user doesn't wait)
+5. Returns immediately with the upload ID</p>
+
+<p><strong>Background processing function (<code>process_upload_background</code>):</strong>
+1. <strong>Step 1:</strong> Calls <code>process_document()</code> to extract text using OCR and create chunks
+2. <strong>Step 2:</strong> Calls <code>add_document_to_index_async()</code> to generate embeddings and store in FAISS
+3. <strong>Step 3:</strong> Calls <code>pdf_to_word()</code> to create a downloadable Word document
+4. Updates the database status to "COMPLETED" or "FAILED"</p>
+
+<p><strong>Other endpoints:</strong>
+- <code>GET /uploads/</code> — List all uploads for the logged-in user
+- <code>GET /uploads/{id}</code> — Get details of a single upload
+- <code>GET /uploads/{id}/content</code> — Download the original PDF
+- <code>GET /uploads/{id}/extracted</code> — Download the Word document
+- <code>GET /uploads/{id}/extracted/html</code> — View extracted content as HTML (uses <code>mammoth</code> library)</p>
+
+<hr />
+
+<h3 id="310-routes-backendapprouteschatpy">3.10 Routes: <code>backend/app/routes/chat.py</code></h3>
+
+<pre><code>@router.post("/{vector_id}", response_model=ChatResponse)
+async def chat_with_file(vector_id: str, chat_msg: ChatMessage, user=Depends(current_user)):
+    # 1. Verify this document belongs to the user
+    upload = await uploads.find_one({"vector_id": vector_id, "user_id": str(user["_id"])})
+    if not upload:
+        raise HTTPException(status_code=404, detail="File context not found")
+
+    # 2. Create an Orchestrator and process the query
+    orchestrator = Orchestrator(vector_id=vector_id)
+    result = await orchestrator.process_query(chat_msg.message)
+
+    return ChatResponse(agent=result["agent"], response=result["response"], vector_id=vector_id)
+</code></pre>
+
+<p><strong>What this does:</strong> When a user sends a chat message, this endpoint: verifies the user owns the document → creates an Orchestrator (the AI manager) → the orchestrator classifies the query and routes it to the right agent → returns the agent's response.</p>
+
+<hr />
+
+<h2 id="4-the-ai-pipeline-the-brain">4. The AI Pipeline — The Brain</h2>
+
+<h3 id="41-document-processor-backendappaiprocessorpy">4.1 Document Processor: <code>backend/app/ai/processor.py</code></h3>
+
+<p>This is where PDFs are read and turned into searchable text. The key function is <code>process_document()</code>:</p>
+
+<ol>
+<li><strong>Text Extraction</strong> (<code>extract_text_from_pdf</code>): Opens the PDF with PyMuPDF. For each page:
+<ul>
+<li>First tries <strong>native text extraction</strong> (for digital PDFs)</li>
+<li>If a page has very little text (&lt;50 characters), it's probably a <strong>scanned image</strong>, so it runs <strong>OCR</strong> using RapidOCR</li>
+</ul></li>
+<li><strong>OCR Caching</strong>: Saves the extracted text to a JSON file so it doesn't need to re-OCR later</li>
+<li><strong>Smart Chunking</strong> (<code>smart_chunking</code>): Splits the full text into smaller pieces (~1000 characters each, with 200-character overlap). It splits at paragraph boundaries so chunks make semantic sense.</li>
+<li><strong>Metadata</strong>: Each chunk gets tagged with user_id, upload_id, vector_id, filename, page number, etc.</li>
+</ol>
+
+<h3 id="42-embeddings-backendappaivectorstoreembeddingspy">4.2 Embeddings: <code>backend/app/ai/vectorstore/embeddings.py</code></h3>
+
+<pre><code>_embedding_model = None  # Lazy singleton
+
+def get_embedding_model():
+    global _embedding_model
+    if _embedding_model is None:
+        from sentence_transformers import SentenceTransformer
+        _embedding_model = SentenceTransformer(config.EMBEDDING_MODEL)
+    return _embedding_model
+
+def embed_texts(texts):
+    model = get_embedding_model()
+    embeddings = model.encode(texts, convert_to_numpy=True)
+    return embeddings.tolist()
+</code></pre>
+
+<p><strong>What this does:</strong> The embedding model converts text into 384-dimensional number arrays. For example, "heart surgery" might become <code>[0.23, -0.45, 0.12, ...]</code>. Similar texts produce similar number arrays. The model is <strong>lazy loaded</strong> — it only loads into memory the first time it's needed (~30 seconds), keeping server startup fast.</p>
+
+<h3 id="43-vector-store-backendappaivectorstorestorepy">4.3 Vector Store: <code>backend/app/ai/vectorstore/store.py</code></h3>
+
+<p>This manages FAISS indexes — one per uploaded document.</p>
+
+<p><strong>Adding documents:</strong>
+1. Takes text chunks → generates embeddings → adds to a FAISS index
+2. Saves the index and metadata to disk at <code>data/vectors/{vector_id}/faiss_index/</code></p>
+
+<p><strong>Searching:</strong>
+1. Converts the user's question into an embedding
+2. FAISS finds the most similar chunks using L2 distance (Euclidean distance)
+3. Returns the top-k most relevant chunks with their metadata</p>
+
+<p>There are also <strong>SharedVectorStores</strong> for regulations, dietary guidelines, and insurance policies that are shared across all users.</p>
+
+<h3 id="44-the-orchestrator-backendappaiorchestratorpy">4.4 The Orchestrator: <code>backend/app/ai/orchestrator.py</code></h3>
+
+<p>The orchestrator is the <strong>traffic controller</strong>. When a query comes in:</p>
+
+<ol>
+<li><strong>Classification</strong>: Sends the query to Gemini with a prompt like "Which agent should handle this?" The LLM picks between Diet Agent and Discharge Agent.</li>
+<li><strong>Fallback</strong>: If the LLM's response doesn't match any agent name, it uses keyword matching (e.g., if "diet" or "food" is in the query → Diet Agent).</li>
+<li><strong>Delegation</strong>: Passes the query to the selected agent's <code>process_async()</code> method.</li>
+</ol>
+
+<h3 id="45-the-agents-backendappaiagents">4.5 The Agents: <code>backend/app/ai/agents/</code></h3>
+
+<p><strong>BaseAgent</strong> (<code>base.py</code>): Provides common functionality:
+- <code>search_current_document_async()</code> — Searches the document's FAISS index
+- <code>ask_llm_async()</code> — Sends a prompt to Google Gemini
+- Helper methods for searching discharge, bills, dietary guidelines, etc.</p>
+
+<p><strong>DischargeSummaryAgent</strong> (<code>discharge_agent.py</code>): Handles medical questions. It:
+1. Searches the document for relevant chunks (RAG — Retrieval Augmented Generation)
+2. Builds a prompt with a system instruction + the relevant chunks + the user's question
+3. Sends everything to Gemini and returns the response
+4. Has special methods: <code>get_summary()</code> (full document summary) and <code>extract_medications()</code> (medication table)</p>
+
+<p><strong>DietPlanningAgent</strong> (<code>diet_agent.py</code>): Handles nutrition questions. It:
+1. Searches the discharge document for medical conditions
+2. Also searches shared dietary guidelines
+3. Combines both contexts and sends to Gemini
+4. Has special methods: <code>generate_meal_plan()</code> and <code>foods_to_avoid()</code></p>
+
+<h3 id="46-pdf-to-word-backendappaipdf_to_wordpy">4.6 PDF to Word: <code>backend/app/ai/pdf_to_word.py</code></h3>
+
+<p>Converts the uploaded PDF into a formatted Word document (.docx). It:
+1. Uses the OCR cache (from processor.py) to avoid re-running OCR
+2. Detects headings, key-value pairs, and table-like structures
+3. Builds a Word document with proper formatting (bold headings, tables with grid, compact layout)</p>
+
+<hr />
+
+<h2 id="5-frontend-deep-dive">5. Frontend Deep Dive</h2>
+
+<h3 id="51-api-client-frontendsrclibapits">5.1 API Client: <code>frontend/src/lib/api.ts</code></h3>
+
+<pre><code>const api = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000',
+});
+
+// Automatically attach JWT token to every request
+api.interceptors.request.use((config) =&gt; {
+    const token = localStorage.getItem('access_token');
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
+
+// If server returns 401, redirect to login
+api.interceptors.response.use(
+    (response) =&gt; response,
+    (error) =&gt; {
+        if (error.response?.status === 401) {
+            localStorage.removeItem('access_token');
+            window.location.href = '/login';
+        }
+        return Promise.reject(error);
+    }
+);
+</code></pre>
+
+<p><strong>What this does:</strong> Creates a pre-configured Axios HTTP client. <strong>Interceptors</strong> are middleware that run on every request/response. The request interceptor automatically adds the auth token. The response interceptor handles expired tokens by redirecting to login.</p>
+
+<h3 id="52-auth-hook-frontendsrchooksuseauthts">5.2 Auth Hook: <code>frontend/src/hooks/useAuth.ts</code></h3>
+
+<p>A custom React hook that provides <code>login()</code>, <code>register()</code>, <code>logout()</code>, and <code>isAuthenticated()</code> functions. On login, it stores the JWT token in <code>localStorage</code>. On logout, it removes it.</p>
+
+<h3 id="53-type-definitions-frontendsrctypesindexts">5.3 Type Definitions: <code>frontend/src/types/index.ts</code></h3>
+
+<p>TypeScript interfaces that define data shapes (User, Upload, ChatMessage, ChatResponse, etc.) ensuring type safety across the frontend.</p>
+
+<h3 id="54-pages-nextjs-file-based-routing">5.4 Pages (Next.js File-Based Routing)</h3>
+
+<table>
+<thead>
+<tr>
+  <th>File Path</th>
+  <th>URL</th>
+  <th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>src/app/page.tsx</code></td>
+  <td><code>/</code></td>
+  <td>Redirects to <code>/login</code></td>
+</tr>
+<tr>
+  <td><code>src/app/login/page.tsx</code></td>
+  <td><code>/login</code></td>
+  <td>Login form</td>
+</tr>
+<tr>
+  <td><code>src/app/register/page.tsx</code></td>
+  <td><code>/register</code></td>
+  <td>Registration form</td>
+</tr>
+<tr>
+  <td><code>src/app/dashboard/layout.tsx</code></td>
+  <td><code>/dashboard/*</code></td>
+  <td>Dashboard shell (sidebar)</td>
+</tr>
+<tr>
+  <td><code>src/app/dashboard/files/page.tsx</code></td>
+  <td><code>/dashboard/files</code></td>
+  <td>List of uploaded files</td>
+</tr>
+<tr>
+  <td><code>src/app/dashboard/upload/page.tsx</code></td>
+  <td><code>/dashboard/upload</code></td>
+  <td>Upload new PDF</td>
+</tr>
+<tr>
+  <td><code>src/app/dashboard/files/[id]/page.tsx</code></td>
+  <td><code>/dashboard/files/:id</code></td>
+  <td>Chat with a specific document</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="55-key-frontend-dependencies">5.5 Key Frontend Dependencies</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Package</th>
+  <th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>axios</code></td>
+  <td>HTTP requests to backend</td>
+</tr>
+<tr>
+  <td><code>zustand</code></td>
+  <td>Lightweight state management</td>
+</tr>
+<tr>
+  <td><code>@tanstack/react-query</code></td>
+  <td>Server state caching &amp; synchronization</td>
+</tr>
+<tr>
+  <td><code>framer-motion</code></td>
+  <td>Smooth animations</td>
+</tr>
+<tr>
+  <td><code>react-markdown</code> + <code>remark-gfm</code></td>
+  <td>Renders AI responses as formatted Markdown</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="6-how-to-run-the-project">6. How to Run the Project</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+<li>Python 3.12+, Node.js 18+, MongoDB running locally</li>
+</ul>
+
+<h3 id="step-1-backend">Step 1: Backend</h3>
+
+<pre><code>cd backend
+python -m venv backendenv
+source backendenv/bin/activate    # Mac/Linux
+pip install -r app/requirements.txt
+
+# Create backend/.env with:
+# MONGO_URI=mongodb://localhost:27017
+# JWT_SECRET=any-random-string
+# GOOGLE_API_KEY=your-gemini-api-key
+
+uvicorn app.main:app --reload --port 8000
+</code></pre>
+
+<h3 id="step-2-frontend">Step 2: Frontend</h3>
+
+<pre><code>cd frontend
+npm install
+
+# Create frontend/.env.local with:
+# NEXT_PUBLIC_API_URL=http://localhost:8000
+
+npm run dev
+</code></pre>
+
+<h3 id="step-3-open-httplocalhost3000">Step 3: Open http://localhost:3000</h3>
+
+<hr />
+
+<h2 id="7-complete-file-tree">7. Complete File Tree</h2>
+
+<pre><code>ai-insurance-agent-dev-phase1/
+├── SETUP.md                          # Setup instructions
+├── .gitignore
+│
+├── backend/
+│   ├── .env.example                  # Template for environment variables
+│   ├── AI_README.md                  # AI integration guide
+│   └── app/
+│       ├── main.py                   # FastAPI entry point
+│       ├── requirements.txt          # Python dependencies
+│       ├── core/
+│       │   ├── config.py             # All configuration settings
+│       │   ├── security.py           # Password hashing &amp; JWT tokens
+│       │   └── deps.py               # Auth dependency (current_user)
+│       ├── db/
+│       │   ├── mongo.py              # MongoDB connection &amp; collections
+│       │   └── init_indexes.py       # Database index creation
+│       ├── models/
+│       │   ├── auth.py               # Login data model
+│       │   ├── user.py               # User data models
+│       │   ├── chat.py               # Chat message/response models
+│       │   └── upload.py             # Upload data models
+│       ├── routes/
+│       │   ├── auth.py               # /auth/register &amp; /auth/login
+│       │   ├── uploads.py            # /uploads/ (CRUD + background processing)
+│       │   └── chat.py               # /chat/{vector_id}
+│       └── ai/
+│           ├── documents.py          # ChunkMetadata schema
+│           ├── processor.py          # PDF text extraction &amp; chunking
+│           ├── pdf_to_word.py        # PDF → Word conversion
+│           ├── orchestrator.py       # Query router (picks the right agent)
+│           ├── agents/
+│           │   ├── base.py           # BaseAgent with RAG search + LLM
+│           │   ├── discharge_agent.py# Medical Q&amp;A agent
+│           │   ├── diet_agent.py     # Nutrition planning agent
+│           │   ├── bill_agent.py     # (Placeholder) Bill validation
+│           │   └── medicine_agent.py # (Placeholder) Medicine prices
+│           ├── vectorstore/
+│           │   ├── embeddings.py     # Text → 384-dim vectors
+│           │   └── store.py          # FAISS index management
+│           └── scrapers/
+│               └── pharmacy.py       # Web scraper for medicine prices
+│
+├── frontend/
+│   ├── package.json                  # Node.js dependencies
+│   ├── next.config.js                # Next.js configuration
+│   ├── tailwind.config.ts            # Tailwind CSS configuration
+│   ├── tsconfig.json                 # TypeScript configuration
+│   └── src/
+│       ├── app/
+│       │   ├── globals.css           # Global styles
+│       │   ├── layout.tsx            # Root HTML layout
+│       │   ├── page.tsx              # Home (redirects to /login)
+│       │   ├── not-found.tsx         # 404 page
+│       │   ├── login/page.tsx        # Login page
+│       │   ├── register/page.tsx     # Registration page
+│       │   └── dashboard/
+│       │       ├── layout.tsx        # Dashboard layout (sidebar)
+│       │       ├── upload/page.tsx   # Upload page
+│       │       └── files/
+│       │           ├── page.tsx      # File listing
+│       │           └── [id]/
+│       │               ├── page.tsx      # Chat with document
+│       │               ├── content/page.tsx   # View original PDF
+│       │               └── extracted/page.tsx # View extracted text
+│       ├── components/
+│       │   ├── Sidebar.tsx           # Navigation sidebar
+│       │   └── ProtectedRoute.tsx    # Auth guard component
+│       ├── context/
+│       │   └── ToastContext.tsx       # Toast notification system
+│       ├── hooks/
+│       │   └── useAuth.ts            # Authentication hook
+│       ├── lib/
+│       │   └── api.ts                # Axios HTTP client
+│       └── types/
+│           └── index.ts              # TypeScript interfaces
+│
+├── GIG/                              # Reference implementation
+└── venv/                             # Python virtual environment
+</code></pre>
+
+</body>
+</html>

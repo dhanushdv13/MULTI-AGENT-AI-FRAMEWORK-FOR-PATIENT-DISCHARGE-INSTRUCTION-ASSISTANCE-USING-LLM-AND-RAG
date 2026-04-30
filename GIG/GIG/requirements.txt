@@ -1,0 +1,43 @@
+# SAAIS - SAN Airlines Autonomous Interline System
+# Dependencies
+
+# Core LangChain & LangGraph
+langchain
+langgraph
+langchain-core
+langchain-community
+
+# LLM Providers
+langchain-google-genai
+langchain-openai
+
+# Embeddings & Vector Store
+sentence-transformers
+faiss-cpu
+langchain-huggingface
+
+# Database
+sqlalchemy
+
+# API Server (ONE Record mock)
+fastapi
+uvicorn
+pydantic
+
+# Document Processing
+pypdf
+
+# Utilities
+python-dotenv
+fastmcp
+
+rich
+typer
+requests
+httpx
+
+notebook
+networkx
+
+PyMuPDF 
+paddleocr

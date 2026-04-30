@@ -1,0 +1,116 @@
+2/8/26,8:53AM
+AIIMS/BL/2024/003421
+ALLINDIAINSTITUTEOFMEDICALSCIENCES
+Ansari Nagar,NewDelhi-110029|Tel:011-26588500
+Government Hospital-CGHSEmpaneled
+HOSPITAL BILL
+Bill No:
+AIIMS/BL/2024/003421
+Bill Date:
+15-Jan-2024
+Patient Name:
+Mrs.SUNITASHARMA
+UHID:
+AlIMS/2024/156789
+Age/Gender:
+58Years/Female
+Room Type:
+General Ward
+Admission:
+10-Jan-2024
+Discharge:
+15-Jan-2024
+Doctor:
+Dr. R.K. Verma (MD, DM Cardiology)
+Diagnosis:
+Acute Myocardial Infarction(STEMI)-AnteriorWall
+Procedure:
+Primary PCI with Drug-Eluting Stent placement in LAD
+ITEMIZEDCHARGES
+S.No
+Description
+Qty
+Rate (3)
+Amount ()
+1
+Room Charges (General Ward)- 5 days
+5
+500
+2,500
+2
+ICU Charges (2 days)
+2
+3,500
+7,000
+3
+Primary PCI Procedure
+1
+45,000
+45,000
+4
+Drug Eluting Stent(DES)
+1
+35,000
+35,000
+5
+Coronary Angiography
+1
+7,000
+7,000
+6
+ECG (Serial)- 8 times
+8
+100
+800
+7
+Echocardiography 2D
+2
+1,200
+2,400
+8
+Laboratory Tests (Troponin,CBC,Lipid Profile,LFT,KFT)
+1
+3,000
+3,000
+9
+Inj.Tenecteplase
+1
+10,000
+10,000
+10
+Tab.Clopidogrel75mg (30 tablets)
+30
+8
+240
+11
+Tab.Atorvastatin 40mg (30 tablets)
+30
+5
+150
+12
+Inj.Enoxaparin 60mg(10 syringes)
+10
+220
+2,200
+13
+Nursing Care-5 days
+5
+500
+2,500
+14
+Dressing&Consumables
+1
+1,500
+1,500
+Subtotal:119,290
+GST @ 5%: 5,965
+TOTAL:125,255
+ForALLINDIAINSTITUTEOFMEDICALSCIENCES
+file:///C:/Users/harsh/OneDrive/Desktop/Nik/GIG/docs/bills/Bill_2_MANIPAL.html
+1/2
+2/8/26,8:53AM
+AIIMS/BL/2024/003421
+AuthorizedSignatory
+This isacomputer-generatedbill.
+file://C:/Users/harsh/OneDrive/Desktop/Nik/GIG/docs/bills/Bill_2_MANIPAL.html
+2/2

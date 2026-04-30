@@ -1,0 +1,200 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AIIMS/BL/2024/003421</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; font-size: 11pt; }
+.header { text-align: center; border-bottom: 3px solid #1F2937; padding-bottom: 15px; margin-bottom: 20px; }
+.hospital-name { font-size: 18pt; font-weight: bold; color: #1F2937; }
+.hospital-address { font-size: 9pt; color: #555; margin-top: 5px; }
+.bill-title { font-size: 14pt; font-weight: bold; background: #1F2937; color: white; padding: 8px; text-align: center; margin: 20px 0; }
+.info-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+.info-table td { padding: 6px 8px; border: 1px solid #ddd; font-size: 10pt; }
+.info-table td:nth-child(odd) { background: #F3F4F6; font-weight: bold; width: 25%; }
+.bill-items { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 9pt; }
+.bill-items thead { background: #1F2937; color: white; font-weight: bold; }
+.bill-items th { padding: 8px 6px; text-align: left; border: 1px solid #1F2937; }
+.bill-items td { padding: 6px; border: 1px solid #ddd; }
+.bill-items tbody tr:nth-child(even) { background: #f9f9f9; }
+.issue-warning { color: #DC2626; font-size: 8pt; font-style: italic; display: block; margin-top: 2px; }
+.total-section { margin-top: 15px; text-align: right; }
+.total-row { padding: 5px 10px; }
+.grand-total { font-weight: bold; font-size: 12pt; background: #F3F4F6; padding: 8px 10px; margin-top: 5px; border: 2px solid #1F2937; }
+.analysis-box { background: #FEF3C7; border: 2px solid #F59E0B; padding: 15px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="header">
+<div class="hospital-name">ALL INDIA INSTITUTE OF MEDICAL SCIENCES</div>
+<div class="hospital-address">Ansari Nagar, New Delhi - 110029 | Tel: 011-26588500</div>
+<div class="hospital-address">Government Hospital - CGHS Empaneled</div>
+</div>
+
+<div class="bill-title">HOSPITAL BILL</div>
+
+<table class="info-table">
+<tr><td>Bill No:</td><td>AIIMS/BL/2024/003421</td><td>Bill Date:</td><td>15-Jan-2024</td></tr>
+<tr><td>Patient Name:</td><td>Mrs. SUNITA SHARMA</td><td>UHID:</td><td>AIIMS/2024/156789</td></tr>
+<tr><td>Age/Gender:</td><td>58 Years / Female</td><td>Room Type:</td><td>General Ward</td></tr>
+<tr><td>Admission:</td><td>10-Jan-2024</td><td>Discharge:</td><td>15-Jan-2024</td></tr>
+<tr><td>Doctor:</td><td colspan="3">Dr. R.K. Verma (MD, DM Cardiology)</td></tr>
+</table>
+
+<table class="info-table">
+<tr><td>Diagnosis:</td><td colspan="3">Acute Myocardial Infarction (STEMI) - Anterior Wall</td></tr>
+<tr><td>Procedure:</td><td colspan="3">Primary PCI with Drug-Eluting Stent placement in LAD</td></tr>
+</table>
+
+<h3 style="color: #1F2937;">ITEMIZED CHARGES</h3>
+<table class="bill-items">
+<thead>
+<tr><th style="width:5%">S.No</th><th style="width:50%">Description</th><th style="width:8%">Qty</th><th style="width:15%">Rate (₹)</th><th style="width:17%">Amount (₹)</th></tr>
+</thead>
+<tbody>
+<tr><td style='text-align:center'>1</td><td>Room Charges (General Ward) - 5 days</td><td style='text-align:center'>5</td><td style='text-align:right'>500</td><td style='text-align:right'>2,500</td></tr>
+<tr><td style='text-align:center'>2</td><td>ICU Charges (2 days)</td><td style='text-align:center'>2</td><td style='text-align:right'>2,500</td><td style='text-align:right'>5,000</td></tr>
+<tr><td colspan='5' style='border-top:none'><span class='issue-warning'>⚠️ OVERCHARGED: ₹500/day above CGHS rate</span></td></tr>
+<tr><td style='text-align:center'>3</td><td>Primary PCI Procedure</td><td style='text-align:center'>1</td><td style='text-align:right'>45,000</td><td style='text-align:right'>45,000</td></tr>
+<tr><td colspan='5' style='border-top:none'><span class='issue-warning'>⚠️ OVERCHARGED: ₹10,000 above CGHS rate</span></td></tr>
+<tr><td style='text-align:center'>4</td><td>Drug Eluting Stent (DES)</td><td style='text-align:center'>1</td><td style='text-align:right'>85,000</td><td style='text-align:right'>85,000</td></tr>
+<tr><td colspan='5' style='border-top:none'><span class='issue-warning'>⚠️ MAJOR OVERCHARGE: ₹55,400 above NPPA ceiling (187% markup)</span></td></tr>
+<tr><td style='text-align:center'>5</td><td>Angiography</td><td style='text-align:center'>1</td><td style='text-align:right'>8,000</td><td style='text-align:right'>8,000</td></tr>
+<tr><td style='text-align:center'>6</td><td>ECG (Serial) - 8 times</td><td style='text-align:center'>8</td><td style='text-align:right'>100</td><td style='text-align:right'>800</td></tr>
+<tr><td style='text-align:center'>7</td><td>Echocardiography 2D</td><td style='text-align:center'>2</td><td style='text-align:right'>1,200</td><td style='text-align:right'>2,400</td></tr>
+<tr><td style='text-align:center'>8</td><td>Laboratory Tests (Troponin, CBC, Lipid)</td><td style='text-align:center'>1</td><td style='text-align:right'>3,500</td><td style='text-align:right'>3,500</td></tr>
+<tr><td style='text-align:center'>9</td><td>Inj. Tenecteplase</td><td style='text-align:center'>1</td><td style='text-align:right'>12,000</td><td style='text-align:right'>12,000</td></tr>
+<tr><td colspan='5' style='border-top:none'><span class='issue-warning'>⚠️ OVERCHARGED: ₹3,500 above NPPA ceiling</span></td></tr>
+<tr><td style='text-align:center'>10</td><td>Tab. Clopidogrel 75mg (30 tablets)</td><td style='text-align:center'>30</td><td style='text-align:right'>15</td><td style='text-align:right'>450</td></tr>
+<tr><td colspan='5' style='border-top:none'><span class='issue-warning'>⚠️ OVERCHARGED: ₹9.50/tab above NPPA</span></td></tr>
+<tr><td style='text-align:center'>11</td><td>Tab. Atorvastatin 40mg (30 tablets)</td><td style='text-align:center'>30</td><td style='text-align:right'>8</td><td style='text-align:right'>240</td></tr>
+<tr><td style='text-align:center'>12</td><td>Inj. Enoxaparin 60mg (10 syringes)</td><td style='text-align:center'>10</td><td style='text-align:right'>250</td><td style='text-align:right'>2,500</td></tr>
+<tr><td colspan='5' style='border-top:none'><span class='issue-warning'>⚠️ OVERCHARGED: ₹100/syringe above NPPA</span></td></tr>
+<tr><td style='text-align:center'>13</td><td>Nursing Care - 5 days</td><td style='text-align:center'>5</td><td style='text-align:right'>800</td><td style='text-align:right'>4,000</td></tr>
+<tr><td colspan='5' style='border-top:none'><span class='issue-warning'>⚠️ UNBUNDLING: Should be in room charges</span></td></tr>
+<tr><td style='text-align:center'>14</td><td>Dressing & Consumables</td><td style='text-align:center'>1</td><td style='text-align:right'>2,500</td><td style='text-align:right'>2,500</td></tr>
+</tbody>
+</table>
+
+<div class="total-section">
+<div class="total-row">Subtotal: <strong>₹ 177,390</strong></div>
+<div class='total-row'>GST @ 5%: <strong>₹ 8,870</strong></div>
+<div class='total-row grand-total'>TOTAL: ₹ 186,260</div>
+</div>
+
+<div class="analysis-box">
+<h3 style="margin-top:0;color:#92400E">BILLING ANALYSIS (For Testing)</h3>
+<p><strong>Total Overcharging:</strong> ₹71,185</p>
+<p><strong>Fair Amount:</strong> ₹115,075</p>
+<p><strong>Percentage Overcharged:</strong> 61.9%</p>
+<p><strong>Major Issues:</strong></p>
+<ul>
+<li>DES Stent: ₹55,400 excess (187% markup)</li>
+<li>PCI Procedure: ₹10,000 excess</li>
+<li>Nursing care unbundling</li>
+<li>Multiple medicine overcharges</li>
+</ul>
+</div>
+
+<div style="margin-top:40px;text-align:right">
+<p>For ALL INDIA INSTITUTE OF MEDICAL SCIENCES</p>
+<p style="margin-top:50px;border-top:1px solid #000;display:inline-block;padding-top:5px;min-width:200px">Authorized Signatory</p>
+</div>
+
+<div style="text-align:center;margin-top:30px;font-size:8pt;color:#666;border-top:1px solid #ddd;padding-top:10px">
+Computer-generated bill for OCR testing • Bill Validator Agent Training Data
+</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AIIMS/BL/2024/003421</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; font-size: 11pt; }
+.header { text-align: center; border-bottom: 3px solid #1F2937; padding-bottom: 15px; margin-bottom: 20px; }
+.hospital-name { font-size: 18pt; font-weight: bold; color: #1F2937; }
+.hospital-address { font-size: 9pt; color: #555; margin-top: 5px; }
+.bill-title { font-size: 14pt; font-weight: bold; background: #1F2937; color: white; padding: 8px; text-align: center; margin: 20px 0; }
+.info-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+.info-table td { padding: 6px 8px; border: 1px solid #ddd; font-size: 10pt; }
+.info-table td:nth-child(odd) { background: #F3F4F6; font-weight: bold; width: 25%; }
+.bill-items { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 9pt; }
+.bill-items thead { background: #1F2937; color: white; font-weight: bold; }
+.bill-items th { padding: 8px 6px; text-align: left; border: 1px solid #1F2937; }
+.bill-items td { padding: 6px; border: 1px solid #ddd; }
+.bill-items tbody tr:nth-child(even) { background: #f9f9f9; }
+.total-section { margin-top: 15px; text-align: right; }
+.total-row { padding: 5px 10px; }
+.grand-total { font-weight: bold; font-size: 12pt; background: #F3F4F6; padding: 8px 10px; margin-top: 5px; border: 2px solid #1F2937; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="hospital-name">ALL INDIA INSTITUTE OF MEDICAL SCIENCES</div>
+  <div class="hospital-address">Ansari Nagar, New Delhi - 110029 | Tel: 011-26588500</div>
+  <div class="hospital-address">Government Hospital - CGHS Empaneled</div>
+</div>
+
+<div class="bill-title">HOSPITAL BILL</div>
+
+<table class="info-table">
+  <tr><td>Bill No:</td><td>AIIMS/BL/2024/003421</td><td>Bill Date:</td><td>15-Jan-2024</td></tr>
+  <tr><td>Patient Name:</td><td>Mrs. SUNITA SHARMA</td><td>UHID:</td><td>AIIMS/2024/156789</td></tr>
+  <tr><td>Age/Gender:</td><td>58 Years / Female</td><td>Room Type:</td><td>General Ward</td></tr>
+  <tr><td>Admission:</td><td>10-Jan-2024</td><td>Discharge:</td><td>15-Jan-2024</td></tr>
+  <tr><td>Doctor:</td><td colspan="3">Dr. R.K. Verma (MD, DM Cardiology)</td></tr>
+</table>
+
+<table class="info-table">
+  <tr><td>Diagnosis:</td><td colspan="3">Acute Myocardial Infarction (STEMI) - Anterior Wall</td></tr>
+  <tr><td>Procedure:</td><td colspan="3">Primary PCI with Drug-Eluting Stent placement in LAD</td></tr>
+</table>
+
+<h3 style="color: #1F2937;">ITEMIZED CHARGES</h3>
+<table class="bill-items">
+  <thead>
+    <tr>
+      <th style="width:5%">S.No</th>
+      <th style="width:50%">Description</th>
+      <th style="width:8%">Qty</th>
+      <th style="width:15%">Rate (₹)</th>
+      <th style="width:17%">Amount (₹)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="text-align:center">1</td><td>Room Charges (General Ward) - 5 days</td><td style="text-align:center">5</td><td style="text-align:right">800</td><td style="text-align:right">4,000</td></tr>
+    <tr><td style="text-align:center">2</td><td>ICU Charges (2 days)</td><td style="text-align:center">2</td><td style="text-align:right">6,000</td><td style="text-align:right">12,000</td></tr>
+    <tr><td style="text-align:center">3</td><td>Primary PCI Procedure</td><td style="text-align:center">1</td><td style="text-align:right">55,000</td><td style="text-align:right">55,000</td></tr>
+    <tr><td style="text-align:center">4</td><td>Drug Eluting Stent (DES)</td><td style="text-align:center">1</td><td style="text-align:right">65,000</td><td style="text-align:right">65,000</td></tr>
+    <tr><td style="text-align:center">5</td><td>Coronary Angiography</td><td style="text-align:center">1</td><td style="text-align:right">9,000</td><td style="text-align:right">9,000</td></tr>
+    <tr><td style="text-align:center">6</td><td>ECG (Serial) - 8 times</td><td style="text-align:center">8</td><td style="text-align:right">150</td><td style="text-align:right">1,200</td></tr>
+    <tr><td style="text-align:center">7</td><td>Echocardiography 2D</td><td style="text-align:center">2</td><td style="text-align:right">1,800</td><td style="text-align:right">3,600</td></tr>
+    <tr><td style="text-align:center">8</td><td>Laboratory Tests (Troponin, CBC, Lipid Profile, LFT, KFT)</td><td style="text-align:center">1</td><td style="text-align:right">4,000</td><td style="text-align:right">4,000</td></tr>
+    <tr><td style="text-align:center">9</td><td>Inj. Tenecteplase</td><td style="text-align:center">1</td><td style="text-align:right">16,000</td><td style="text-align:right">16,000</td></tr>
+    <tr><td style="text-align:center">10</td><td>Tab. Clopidogrel 75mg (30 tablets)</td><td style="text-align:center">30</td><td style="text-align:right">18</td><td style="text-align:right">540</td></tr>
+    <tr><td style="text-align:center">11</td><td>Tab. Atorvastatin 40mg (30 tablets)</td><td style="text-align:center">30</td><td style="text-align:right">10</td><td style="text-align:right">300</td></tr>
+    <tr><td style="text-align:center">12</td><td>Inj. Enoxaparin 60mg (10 syringes)</td><td style="text-align:center">10</td><td style="text-align:right">350</td><td style="text-align:right">3,500</td></tr>
+    <tr><td style="text-align:center">13</td><td>Nursing Care - 5 days</td><td style="text-align:center">5</td><td style="text-align:right">1,000</td><td style="text-align:right">5,000</td></tr>
+    <tr><td style="text-align:center">14</td><td>Dressing & Consumables</td><td style="text-align:center">1</td><td style="text-align:right">3,000</td><td style="text-align:right">3,000</td></tr>
+  </tbody>
+</table>
+
+<div class="total-section">
+  <div class="total-row">Subtotal: <strong>₹ 182,140</strong></div>
+  <div class="total-row">GST @ 5%: <strong>₹ 9,107</strong></div>
+  <div class="total-row grand-total">TOTAL: ₹ 191,247</div>
+</div>
+
+<div style="margin-top:40px;text-align:right">
+  <p>For ALL INDIA INSTITUTE OF MEDICAL SCIENCES</p>
+  <p style="margin-top:50px;border-top:1px solid #000;display:inline-block;padding-top:5px;min-width:200px">Authorized Signatory</p>
+</div>
+
+<div style="text-align:center;margin-top:30px;font-size:8pt;color:#666;border-top:1px solid #ddd;padding-top:10px">
+This is a computer-generated bill.
+</div>
+</body>
+</html>

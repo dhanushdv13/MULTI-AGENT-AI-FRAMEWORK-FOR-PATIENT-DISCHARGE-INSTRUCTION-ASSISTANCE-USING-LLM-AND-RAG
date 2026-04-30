@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discharge Summary Generator</title>
+    <style>
+        :root {
+            --color-primary: #003366;
+            --color-secondary: #E8F4F8;
+            --color-text: #1F2937;
+            --color-border: #D1D5DB;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #F9FAFB;
+            color: var(--color-text);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .panel {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            grid-column: 1 / -1;
+        }
+        
+        h2 {
+            color: var(--color-primary);
+            margin-top: 0;
+            font-size: 18px;
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        button {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #002244;
+        }
+        
+        #preview {
+            background: white;
+            border: 1px solid var(--color-border);
+            padding: 40px;
+            min-height: 800px;
+            font-size: 11pt;
+            line-height: 1.4;
+        }
+        
+        .preview-header {
+            text-align: center;
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #0066CC 100%);
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .hospital-name {
+            font-size: 18pt;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        .hospital-address {
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        .discharge-title {
+            font-size: 14pt;
+            font-weight: bold;
+            background: var(--color-primary);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        
+        .info-table td {
+            padding: 6px 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .info-table td:nth-child(odd) {
+            background: var(--color-secondary);
+            font-weight: bold;
+            width: 25%;
+        }
+        
+        .section-header {
+            font-weight: bold;
+            font-size: 11pt;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: var(--color-primary);
+            text-transform: uppercase;
+        }
+        
+        .lab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 9pt;
+        }
+        
+        .lab-table thead {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .lab-table th, .lab-table td {
+            padding: 6px 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        .medication-section {
+            margin: 10px 0;
+        }
+        
+        .medication-section h4 {
+            color: var(--color-primary);
+            margin: 10px 0 5px 0;
+            font-size: 10pt;
+        }
+        
+        .medication-list {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+        
+        .footer-section {
+            margin-top: 30px;
+            text-align: right;
+        }
+        
+        .signature-line {
+            border-top: 1px solid #000;
+            display: inline-block;
+            padding-top: 5px;
+            min-width: 200px;
+            margin-top: 50px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { grid-template-columns: 1fr; }
+            .panel:first-child { display: none; }
+            #preview { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🏥 Discharge Summary Generator</h1>
+    
+    <div class="container">
+        <!-- Input Form -->
+        <div class="panel">
+            <h2>Patient Information</h2>
+            
+            <div class="form-group">
+                <label>Hospital Name:</label>
+                <input type="text" id="hospitalName" value="Toronto General Hospital">
+            </div>
+            
+            <div class="form-group">
+                <label>Hospital Address:</label>
+                <input type="text" id="hospitalAddress" value="200 Elizabeth Street, Toronto, ON M5G 2C4">
+            </div>
+            
+            <div class="form-group">
+                <label>Hospital Logo Initials (2-3 letters):</label>
+                <input type="text" id="logoInitials" value="TGH" maxlength="3">
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label>Patient Name:</label>
+                    <input type="text" id="patientName" value="Smith, John">
+                </div>
+                <div class="form-group">
+                    <label>MRN:</label>
+                    <input type="text" id="mrn" value="1234567">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label>Date of Birth:</label>
+                    <input type="date" id="dob" value="1950-12-25">
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <select id="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <h2>Visit Information</h2>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label>Visit Number:</label>
+                    <input type="text" id="visitNumber" value="11186424686">
+                </div>
+                <div class="form-group">
+                    <label>Encounter Type:</label>
+                    <select id="encounterType">
+                        <option>Inpatient</option>
+                        <option>Day Surgery</option>
+                        <option>Emergency</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label>Admission Date:</label>
+                    <input type="date" id="admissionDate" value="2024-02-01">
+                </div>
+                <div class="form-group">
+                    <label>Discharge Date:</label>
+                    <input type="date" id="dischargeDate" value="2024-02-07">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Discharge Diagnosis:</label>
+                <input type="text" id="dischargeDiagnosis" value="Pyelonephritis">
+            </div>
+            
+            <div class="form-group">
+                <label>Discharge Disposition:</label>
+                <input type="text" id="dischargeDisposition" value="Discharged home">
+            </div>
+            
+            <h2>Healthcare Providers</h2>
+            
+            <div class="form-group">
+                <label>Primary Care Provider:</label>
+                <input type="text" id="primaryCare" value="Dr. Samantha Jay; 416-555-5555">
+            </div>
+            
+            <div class="form-group">
+                <label>Most Responsible Provider:</label>
+                <input type="text" id="responsibleProvider" value="Dr. Michael Snow; Physician; 416-123-4567">
+            </div>
+            
+            <div class="form-group">
+                <label>Completed By:</label>
+                <input type="text" id="completedBy" value="Dr. Dan Lee; Senior Resident; 416-321-4567">
+            </div>
+            
+            <h2>Diagnosis & Conditions</h2>
+            
+            <div class="form-group">
+                <label>Pre-Existing Conditions:</label>
+                <textarea id="preExisting">Hypertension, Type 2 diabetes with no known complications</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Conditions Developed During Stay:</label>
+                <textarea id="developed">Acute kidney injury, Transaminitis</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Conditions Not Impacting LOS:</label>
+                <textarea id="notImpacting">Iron deficiency anemia</textarea>
+            </div>
+            
+            <h2>Hospital Course</h2>
+            
+            <div class="form-group">
+                <label>Chief Complaint & Initial Presentation:</label>
+                <textarea id="chiefComplaint" rows="3">Patient presented with five days of increased urinary frequency, urgency and dysuria as well as 48 hours of fever and rigors. He was hypotensive and tachycardic upon arrival to the emergency department.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Hospital Course Summary (separate issues with "Issue X:"):</label>
+                <textarea id="hospitalCourse" rows="6">Issue 1: Fever and urinary symptoms - Pyelonephritis diagnosed. Patient was hypotensive (BP 80/40), lactate elevated at 6.1. IV fluids and levophed support initiated. Blood cultures positive for E.Coli sensitive to all antibiotics. Stepped down to oral ciprofloxacin for 14-day course.
+
+Issue 2: Enlarged prostate discovered on imaging. Patient started on Tamsulosin 0.4mg. Outpatient urology referral requested.
+
+Issue 3: Elevated liver enzymes and creatinine secondary to sepsis-related hypoperfusion. Values improved with IV fluids. Ultrasound ruled out other etiologies. Family physician to repeat tests in 2 weeks.</textarea>
+            </div>
+            
+            <h2>Medications at Discharge</h2>
+            
+            <div class="form-group">
+                <label>Unchanged Medications (one per line):</label>
+                <textarea id="unchangedMeds" rows="3">Proferrin 1 tablet PO daily
+Ramipril 10mg PO daily
+Metformin 500mg PO BID</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>New Medications (one per line):</label>
+                <textarea id="newMeds" rows="3">Ciprofloxacin 500mg PO twice daily for 7 days
+Tamsulosin 0.4mg PO QHS</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Discontinued Medications (one per line):</label>
+                <textarea id="discontinuedMeds" rows="2">None</textarea>
+            </div>
+            
+            <h2>Follow-Up</h2>
+            
+            <div class="form-group">
+                <label>Patient Instructions:</label>
+                <textarea id="patientInstructions" rows="3">1. Fever and urinary symptoms: Should these return, contact your family doctor urgently or visit nearest emergency.
+2. Dizziness: New medication for enlarged prostate may cause dizziness. Contact physician if this occurs.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Provider Recommendations:</label>
+                <textarea id="providerRecommendations" rows="3">Dear Dr. Jay: Your patient was admitted with pyelonephritis complicated by AKI and transaminitis, likely related to BPH. Please repeat AST and ALT in two weeks. Urology referral sent.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Referrals/Appointments:</label>
+                <textarea id="referrals" rows="2">Outpatient Urology - Dr. Kenneth Cole - 416-340-4555 - Patient to be called within one week</textarea>
+            </div>
+            
+            <button onclick="generatePreview()">🔄 Update Preview</button>
+            <button onclick="window.print()" style="background: #059669;">🖨️ Print/Save as PDF</button>
+        </div>
+        
+        <!-- Preview Panel -->
+        <div class="panel" style="max-height: 100vh; overflow-y: auto;">
+            <h2>Live Preview</h2>
+            <div id="preview"></div>
+        </div>
+    </div>
+    
+    <script>
+        function calculateAge(dob) {
+            const birthDate = new Date(dob);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+        
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const day = String(date.getDate()).padStart(2, '0');
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            const month = monthNames[date.getMonth()];
+            const year = date.getFullYear();
+            return `${day}-${month}-${year}`;
+        }
+        
+        function generatePreview() {
+            const hospitalName = document.getElementById('hospitalName').value;
+            const hospitalAddress = document.getElementById('hospitalAddress').value;
+            const logoInitials = document.getElementById('logoInitials').value.toUpperCase();
+            const patientName = document.getElementById('patientName').value;
+            const mrn = document.getElementById('mrn').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.getElementById('gender').value;
+            const age = calculateAge(dob);
+            const visitNumber = document.getElementById('visitNumber').value;
+            const encounterType = document.getElementById('encounterType').value;
+            const admissionDate = formatDate(document.getElementById('admissionDate').value);
+            const dischargeDate = formatDate(document.getElementById('dischargeDate').value);
+            const dischargeDiagnosis = document.getElementById('dischargeDiagnosis').value;
+            const dischargeDisposition = document.getElementById('dischargeDisposition').value;
+            const primaryCare = document.getElementById('primaryCare').value;
+            const responsibleProvider = document.getElementById('responsibleProvider').value;
+            const completedBy = document.getElementById('completedBy').value;
+            const preExisting = document.getElementById('preExisting').value;
+            const developed = document.getElementById('developed').value;
+            const notImpacting = document.getElementById('notImpacting').value;
+            const chiefComplaint = document.getElementById('chiefComplaint').value;
+            const hospitalCourse = document.getElementById('hospitalCourse').value;
+            const unchangedMeds = document.getElementById('unchangedMeds').value.split('\n').filter(m => m.trim());
+            const newMeds = document.getElementById('newMeds').value.split('\n').filter(m => m.trim());
+            const discontinuedMeds = document.getElementById('discontinuedMeds').value.split('\n').filter(m => m.trim());
+            const patientInstructions = document.getElementById('patientInstructions').value;
+            const providerRecommendations = document.getElementById('providerRecommendations').value;
+            const referrals = document.getElementById('referrals').value;
+            
+            const currentDate = new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+            
+            let html = `
+                <div class="preview-header">
+                    <div class="logo-placeholder">${logoInitials}</div>
+                    <div class="hospital-name">${hospitalName}</div>
+                    <div class="hospital-address">${hospitalAddress}</div>
+                </div>
+                
+                <div class="discharge-title">DISCHARGE SUMMARY</div>
+                
+                <table class="info-table">
+                    <tr>
+                        <td>Patient Name:</td>
+                        <td>${patientName}</td>
+                        <td>MRN:</td>
+                        <td>${mrn}</td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td>${formatDate(dob)}, ${age} years old</td>
+                        <td>Gender:</td>
+                        <td>${gender}</td>
+                    </tr>
+                    <tr>
+                        <td>Visit Number:</td>
+                        <td>${visitNumber}</td>
+                        <td>Encounter Type:</td>
+                        <td>${encounterType}</td>
+                    </tr>
+                    <tr>
+                        <td>Admission Date:</td>
+                        <td>${admissionDate}</td>
+                        <td>Discharge Date:</td>
+                        <td>${dischargeDate}</td>
+                    </tr>
+                    <tr>
+                        <td>Discharge Diagnosis:</td>
+                        <td colspan="3">${dischargeDiagnosis}</td>
+                    </tr>
+                    <tr>
+                        <td>Discharge Disposition:</td>
+                        <td colspan="3">${dischargeDisposition}</td>
+                    </tr>
+                </table>
+                
+                <table class="info-table">
+                    <tr>
+                        <td>Primary Care Provider:</td>
+                        <td colspan="3">${primaryCare}</td>
+                    </tr>
+                    <tr>
+                        <td>Most Responsible Provider:</td>
+                        <td colspan="3">${responsibleProvider}</td>
+                    </tr>
+                    <tr>
+                        <td>Completed By:</td>
+                        <td colspan="3">${completedBy} on ${currentDate}</td>
+                    </tr>
+                </table>
+                
+                <div class="section-header">Diagnosis (Co-Morbidities and Risks)</div>
+                
+                <p><strong>Conditions Impacting Hospital LOS:</strong></p>
+                <p><strong>Pre-Existing:</strong> ${preExisting}</p>
+                <p><strong>Developed:</strong> ${developed}</p>
+                <p><strong>Conditions Not Impacting LOS:</strong> ${notImpacting}</p>
+                
+                <div class="section-header">Course While In Hospital</div>
+                
+                <p><strong>Relevant Complaint(s) and Concerns:</strong></p>
+                <p>${chiefComplaint}</p>
+                
+                <p><strong>Summary Course in Hospital (Issues Addressed):</strong></p>
+                <p style="white-space: pre-line">${hospitalCourse}</p>
+                
+                <div class="section-header">Medications at Discharge</div>
+                
+                <div class="medication-section">
+                    <h4>Unchanged Medications:</h4>
+                    <ul class="medication-list">
+                        ${unchangedMeds.map(med => `<li>${med}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="medication-section">
+                    <h4>New Medications:</h4>
+                    <ul class="medication-list">
+                        ${newMeds.map(med => `<li>${med}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="medication-section">
+                    <h4>Discontinued Medications:</h4>
+                    <ul class="medication-list">
+                        ${discontinuedMeds.map(med => `<li>${med}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="section-header">Discharge Plan</div>
+                
+                <p><strong>Follow-Up Instructions for Patient:</strong></p>
+                <p style="white-space: pre-line">${patientInstructions}</p>
+                
+                <p><strong>Follow-Up Plan Recommended for Receiving Providers:</strong></p>
+                <p style="white-space: pre-line">${providerRecommendations}</p>
+                
+                <p><strong>Referrals and Appointments:</strong></p>
+                <p>${referrals}</p>
+                
+                <div class="footer-section">
+                    <p>For ${hospitalName}</p>
+                    <div class="signature-line">Authorized Signatory</div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px; font-size: 8pt; color: #666; border-top: 1px solid #ddd; padding-top: 10px;">
+                    Document generated on ${currentDate} • For official medical records
+                </div>
+            `;
+            
+            document.getElementById('preview').innerHTML = html;
+        }
+        
+        // Generate initial preview
+        generatePreview();
+        
+        // Auto-update on any input change
+        document.querySelectorAll('input, textarea, select').forEach(element => {
+            element.addEventListener('input', generatePreview);
+            element.addEventListener('change', generatePreview);
+        });
+    </script>
+</body>
+</html>

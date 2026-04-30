@@ -1,0 +1,25 @@
+fastapi
+uvicorn[standard]
+motor
+pymongo
+python-jose
+passlib[bcrypt]
+python-multipart
+pydantic
+email-validator
+httpx
+
+# AI Dependencies
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+langchain-huggingface
+sentence-transformers
+faiss-cpu
+beautifulsoup4
+rapidocr-onnxruntime
+PyMuPDF
+python-docx
+
+mammoth

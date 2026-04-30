@@ -1,0 +1,1371 @@
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+Patient No:
+SS21007765
+JHID:
+UMR0731354
+Age(Gender):
+44Y ( Male )
+atientName:
+Mr.NARESHKUMARBEJJANKY
+DischargeOn
+28/04/202111:07
+Admission Date:
+17/04/2021 16:50
+2306(DR SHAILENDER WING SINGLE ROOMS)
+Discharge Type:
+NORMAL
+Bed No:
+Pri.,Cons Dr:
+K.PRASHANTKUMAR
+Sponsor:
+COVID CASH
+Phone:
+9010080800
+Clinical Dept:
+GENERALMEDICINE
+H-NO:5-11/114/252,. PRANEETH PRANAV PANORAMA,. SANGAREDDY. TELANGANA.INDIA.
+Address:
+CONSULTANT*
+DR.K.PRASHANTKUMAR
+MBBBS,MD
+ConsultantInternal Medicine
+DIAGNOSIS
+ICD CODE-R05
+Atypical pneumonia(SARS-COV 2),SEVEREDISEASE(HFNC-NIV)
+STEROIDDYSGLYCEMIA.
+CHIEF COMPLAINT
+Patientpresentedwithfever,coughandbodypainssince5days
+CONDITIONAT
+Patientconscious,oriented
+ADMISSION
+BP:120/70mmHg
+HR:110
+Spo2: 80% RA
+RR:26/min
+INVESTIGATIONS
+ObservedValues
+Units
+Biological ReferenceIntervals
+Test Name
+CRP(C-REACTIVEPROTEINS)(17-04-202117:11)
+98.8
+mg/L
+<5mg/L:NEGATIVE
+CRP
+>5mg/L:POSITIVE
+IMPRESSION
+1) It isserumproteinwhichissynthesizedinliver.
+2) CRP production is a non-specific response to tissue injury; it is recommended that results of the test should be
+correlatedwithclinicalfindingstoarriveat thefinaldiagnosis.
+Medical Superintendent
+HIVIANDII（17-04-202117:09)
+ANTIHIVI&IIANTIBODY
+1-7-201 to 205, P.&. Aoad
+Non-reactre:<1.0
+METHOD
+CMIA
+Boside Paradise Aole!
+Note :- 1
+SECUNDERABBAL. J?
+Above test is ascreening test only
+2
+A non-reactive result does not exclude the possibility of exposure to infection with HiV1/2
+3
+All reactive specimens should be further confirmed by HIV Western Blot or Hiv PCR
+HBS AG （17-04-202117:09)
+Negative (0.19)
+NEGATIVE
+HBSAG
+Pa
+MRD
+il's warm in here
+rantzationAccredited by:
+SUNSHINEHOSPITALS
+PGRoad,aradise,Secunderabad5003,elangana,nia
+100
+Phone:040-4455 0000 Emergency:8008108108 E-mail;info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+Patient No:
+SS21007765
+LHID:
+UMR0731354
+Age(Gender):
+44Y ( Male)
+atientName:
+Mr.NARESHKUMARBEJJANKY
+POSITIVE:>1.0
+CMIA
+METHOD
+Note :- 1
+Aboveassay isascreening testonly
+2
+-deo 'sns sueed ui sesuisns eue-uou seuo pue siey pioenua spoge adosiy o, enp eruanaes
+able of blnding antibodies multivalently and proving erroneous analyte detection In Immunoassays has been detected
+3
+All positive samples should be further confirmed by HBV DNA PCR
+ANTI HCV (HEPATITIS C) ANTIBODY (17-04-2021 17:09 )
+Non-Reactive (0.08)
+<1.0:Non reactive
+ANTIHCVANTIBODY
+>1.0:Reactive
+CMIA
+METHOD
+Note :- 1
+Above test is a screening test only
+2
+A non-reactive result does not exclude the possibility of exposure to or infection with HcV
+3
+Patients with auto-immune liver diseases may showfalselyreactive results
+4
+Allreactivespecimensshould befurtherconfirmed byRIBAORHCVRNAPCR
+CRP(C-REACTIVEPROTEINS)(18-04-2021 06:16)
+mg/L
+<5 mg/L : NEGATIVE
+91.3
+CRP
+>5 mg/L : POSITIVE
+IMPRESSION
+1) It is serum proteinwhichis synthesized in liver.
+correlatedwithclinicalfindingstoarriveatthefinaldiagnosis.
+CRP(C-REACTIVEPROTEINS)（19-04-202100:48)
+54.1
+mg/L
+<5mg/L:NEGATIVE
+CRP
+>5mg/L:POSITIVE
+IMPRESSION
+1) It is serumproteinwhich issynthesized in liver.
+2) CRPproduction is anon-specificresponsetotissue injury;it isrecommended thatresultsof thetest should be
+correlatedwithclinicalfindingstoarriveatthefinaldiagnosis.
+CRP(C-REACTIVEPROTEINS)（20-04-202101:08)
+24.4
+mg/L
+<5mg/L:NEGATIVE
+CRP
+>5mg/L:POSITIVE
+IMPRESSION
+1) It isserumproteinwhich issynthesized in liver.
+correlatedwithclinicalfindingstoarriveatthefinaldiagnosis.
+CRP(C-REACTIVEPROTEINS)(21-04-202101:22)
+13.0
+mg/L
+<5mg/L:NEGATIVE
+CRP
+>5mg/L:POSITIVE
+IMPRESSION
+1) It is serum proteinwhich is synthesized in liver.
+il's warm in here
+tianAc
+ereditedby:
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Telangana,nda
+100
+Phone:040-44550000 Emergency:8008108108 E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+Patient No:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender ):
+44Y ( Male )
+correlated with clinical findings to arrive at the final diagnosis.
+CRP(C-REACTIVEPROTEINS)(22-04-202101:26)
+CRP
+8.2
+mg/L
+<5mg/L:NEGATIVE
+>5 mg/L:POSITIVE
+IMPRESSION
+1) It is serum protein which is synthesized in liver.
+2) CRP production is a non-specific response to tissue injury; it is recommended that results of the test should be
+correlated with clinical findings to arrive at the final diagnosis.
+CRP(C-REACTIVE PROTEINS)(23-04-2021 01:47)
+CRP
+4.8
+mg/L
+<5mg/L:NEGATIVE
+>5mg/L:POSITIVE
+IMPRESSION
+1) It is serum protein which is synthesized in liver.
+2) CRP production is a non-specific response to tissue injury; it is recommended that results of the test should be
+correlated with clinical findings to arrive at the final diagnosis.
+CRP(C-REACTIVEPROTEINS)(24-04-202102:00)
+CRP
+3.8
+mg/L
+<5mg/L:NEGATIVE
+> 5 mg/L : POSITIVE
+IMPRESSION
+1) It is serum protein which is synthesized in liver.
+2) CRP production is a non-specific response to tissue injury; it is recommended that results of the test should be
+correlatedwithclinicalfindingstoarriveatthefinaldiagnosis.
+CT SCAN CHEST(PLAIN)HRCTCHEST (17-04-202117:18)
+FINDINGS
+Trachea andmajorbronchi arenormal incourse andcalibre.Noevidenceof any luminal filling defects.
+Mediastinalvascularstructuresarenormal.
+No evidenceofanyobviousmediastinal adenopathy.
+Multi-focal ground glass opacitieswithseptal thickening noted inbothlungs.
+Restof thelungparenchymaisshowingnormal attenuation.
+No evidence ofpleuraleffusion/thickening.
+Visualisedsectionsof LiverandSpleen arenormal inattenuation.Noevidenceof anyfocal lesions.
+IMPRESSION
+-CT findings are consistent with Covid-19.
+-CT severity score:12/25
+BED SIDE2DECHO （18-04-202112:09)
+MITRALVALVE
+NORMAL
+AORTICVALVE
+NORMAL
+TRICUSPIDVALVE
+NORMAL
+PULMONARYVALVE
+NORMAL
+RIGHTATRIUM
+NORMAL
+RIGHTVENTRICLE
+NORMAL
+LEFTATRIUM
+3.3cm
+LEFTVENTRICLE
+NORWMA
+EDD:4.6cmIVSD:1.0cmEF:62%
+ESD:2.7cmPWD:0.9cmFS:31%
+Pagesor12
+iH's warm in here
+OrganizationAccreditedby.
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Telangana,ndia
+100
+Phone:040-44550000Emergency:8008108108E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+Patient No:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender):
+44Y (Male )
+IAS
+INTACT
+IVS
+INTACT
+AORTA
+2.8cm
+PULMONARYARTERY
+NORMAL
+PERICARDIUM
+NORMAL
+INTRACARDIACMASSES
+NIL
+IVC/SV/CS
+NORMAL
+PULMONARYVEINS
+NORMAL
+COLOURFLOWMAPPING-DOPPLER
+NOMR/NOAR/1+TR/NOPR
+MITRAL
+E>A
+AORTIC
+VMAX=1.4m/sec
+PULMONARY
+VMAX=0.9 m/sec
+TRICUSPID
+TRIVIAL TR
+ECHODIAGNOSIS
+NORWMA
+NORMALCHAMBERS
+NORMALLV/RVFUNCTION
+TRIVIALTR/NOPAH
+NOPERICARDIALEFFUSION/NOCLOTS
+TECHNICIAN:E.KALYAN
+DRGURUCHAITANYAMD,DM
+CARDIOLOGIST
+CUE(COMPLETEURINEEXAMINATION)(17-04-202117:09)
+QUANTITY
+18
+ml
+COLOUR
+Light yellow
+PaleYellow
+APPEARANCE
+Slightly cloudy
+Clear
+REACTION
+6.5
+4.6 -8.0
+SPECIFICGRAVITY
+1.025
+1.001-1.035
+CHEMICALEXAMINATION
+GLUCOSE
+2+
+Absent
+PROTEIN
+1+
+Absent
+KETONEBODIES
+Negative
+Negative
+BILESALTS
+Negative
+Absent
+BILEPIGMENTS
+Negative
+Absent
+BLOOD
+Negative
+Negative
+UROBILINOGEN
+Normal
+Normal
+Negative
+Negative
+NITRITE
+MICROSCOPICEXAMINATION
+2-3
+/hpf
+0-1
+PUSCELLS
+EPITHELIALCELLS
+0-1
+/hpf
+0-1
+IIN
+/hpf
+IIN
+R.B.C.
+CASTS
+Nil
+/hpf
+Absent
+CRYSTALS
+Nil
+/hpf
+Absent
+Budding Yeast :3+
+/hpf
+Absent
+OTHERS
+SUNSHINS
+BLOODGROUP
+Page4of 12
+il's warm in here
+XABAD
+Organization Accreditedby:
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Teangana,ndia
+100
+Phone:040-4455 0000 Emergency:8008108108 E-mail: info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+Patient No:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender):
+44Y (Male)
+RH (D)TYPING
+Negative
+Note :- Reconfirm the Blood Group and Rh Typing along with cross matching before blood transfusion
+Recent blood transfusion, if any, interferes with interpretation of blood grouping
+CBP(COMPLETE BLOOD PICTURE)(17-04-2021 17:09)
+HAEMOGLOBIN
+13.5
+g/dL
+13.0-17.0
+RBC
+4.76
+mill/cumm
+4.5-5.5
+HAEMOTOCRIT(PCV)
+41.3
+vol%
+40.0 -50.0
+MCV (MEAN CELLVOLUME)
+86.7
+f
+83-101
+MCH(Mean CellHaemoglobin)
+28.4
+pg
+27-32
+MCHC(MEAN CELL HAEMOGLOBIN CON-32.7
+g/dL
+31.5-34.5
+CENTRATION)
+PLATELETCOUNT(PLT)
+3.56
+Lakhs/Cumm
+1.5 -4.0
+RDW
+13.5
+%
+11.6-14.0
+MPV
+8.0
+f
+7.5 - 11.5
+WBCCOUNT
+13500
+Cells/cumm
+4,000-11,000
+POLYMORPHS
+85
+%
+40-80
+LYMPHOCYTES
+13
+%
+20-40
+EOSINOPHILS
+01
+%
+1-6
+MONOCYTES
+01
+%
+2-10
+BASOPHILS
+00
+%
+0-1
+RBC.
+Normocytic normochromic.
+WBC.
+Neutrophilicleukocytosis.
+PLATELETS
+Adequate.
+PT (PROTHROMBIN TEST) WITH INR (17-04-2021 17:09)
+PTTEST
+13.4
+secs
+10.88-12.7secs
+PT CONTROL
+11.5
+secs
+INR
+1.164
+APTTTEST
+23.7
+sec
+25.5 - 29.5
+APTTCONTROL
+26.7
+secs
+TC(TOTALLEUCOCYTECOUNT)（18-04-202101:31)
+12400
+Cells/cumm
+4,000-11,000
+WBCCOUNT
+TC(TOTALLEUCOCYTECOUNT)(19-04-202100:48)
+11200
+Cells/cumm
+4,000-11,000
+WBCCOUNT
+TC(TOTALLEUCOCYTE COUNT)（20-04-202101:08)
+8800
+Cells/cumm
+4,000-11,000
+WBCCOUNT
+13.6
+g/dL
+13.0-17.0
+HAEMOGLOBIN
+4.84
+mill/cumm
+4.5-5.5
+RBC
+HAEMOTOCRIT(PCV)
+42.1
+vo1%
+40.0 -50.0
+86.9
+f
+83-101
+MCV (MEANCELLVOLUME)
+28.1
+pg
+27-32
+MCH(MeanCellHaemoglobin)
+g/dL
+31.5-34.5
+MCHC (MEAN CELL HAEMOGLOBIN CON-32.3
+CENTRATION)
+4.37
+Lakhs/Cumm
+1.5 -4.0
+PLATELETCOUNT(PLT)
+NaBotio
+ECT
+i's warm in heve
+OfganizationAccredited by:
+SUNSHINEHOSPITALS
+PGRoad,aradise,Secunderabad500003,Telangana,nda
+100
+Phone:040-44550000Emergency:8008108108E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+Patient No:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender ):
+44Y (Male)
+RDW
+13.1
+%
+11.6-14.0
+MPV
+8.6
+fl
+7.5-11.5
+WBCCOUNT
+9600
+Cells/cumm
+4,000-11,000
+POLYMORPHS
+06
+%
+40-80
+LYMPHOCYTES
+07
+%
+20-40
+EOSINOPHILS
+01
+%
+1-6
+MONOCYTES
+02
+%
+2-10
+BASOPHILS
+00
+%
+0-1
+RBC.
+Normocytic normochromic.
+WBC.
+Neutrophilic.
+PLATELETS
+Mild thrombocytosis.
+CBP(COMPLETEBL0OD PICTURE)(22-04-202101:26)
+HAEMOGLOBIN
+13.4
+g/dL
+13.0-17.0
+RBC
+4.76
+mill/cumm
+4.5-5.5
+HAEMOTOCRIT(PCV)
+41.6
+vol%
+40.0-50.0
+MCV(MEANCELLVOLUME)
+87.3
+f
+83-101
+MCH(Mean Cell Haemoglobin)
+28.2
+pg
+27-32
+MCHC(MEANCELLHAEMOGLOBINCON-32.3
+g/dL
+31.5-34.5
+CENTRATION)
+PLATELET COUNT(PLT)
+4.77
+Lakhs/Cumm
+1.5-4.0
+RDW
+13.4
+%
+11.6-14.0
+MPV
+8.3
+f
+7.5-11.5
+WBCCOUNT
+11700
+Cells/cumm
+4,000-11,000
+POLYMORPHS
+88
+%
+40-80
+LYMPHOCYTES
+60
+%
+20 -40
+EOSINOPHILS
+01
+%
+1-6
+MONOCYTES
+02
+%
+2-10
+BASOPHILS
+00
+%
+0-1
+RBC.
+Normocyticnormochromic.
+WBC.
+Neutrophilic leukocytosis.
+PLATELETS
+Mild thrombocytosis.
+HAEMOGLOBIN
+14.3
+g/dL
+13.0-17.0
+RBC
+5.03
+mill/cumm
+4.5-5.5
+HAEMOTOCRIT(PCV)
+44.0
+vol%
+40.0-50.0
+MCV (MEAN CELLVOLUME)
+87.5
+f
+83-101
+MCH (Mean Cell Haemoglobin)
+28.4
+pg
+27-32
+MCHC(MEANCELLHAEMOGLOBINCON-32.4
+g/dL
+31.5 -34.5
+CENTRATION)
+PLATELET COUNT(PLT)
+4.66
+Lakhs/Cumm
+1.5-4.0
+RDW
+13.4
+%
+11.6-14.0
+MPV
+8.0
+f
+7.5-11.5
+WBCCOUNT
+13600
+Cells/cumm
+4,000-11,000
+POLYMORPHS
+68
+%
+40-80
+LYMPHOCYTES
+28
+%
+20 -40
+EOSINOPHILS
+01
+%
+1-6
+n
+il's warm in here
+Organization Accredited by:
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Telangana,India
+100
+Phone:040-44550000 Emergency:8008108108E-mailinfo@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UMR0731354
+Patient No:
+SS21007765
+UHID:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender):
+44Y (Male)
+PatientName:
+0
+%
+2-10
+MONOCYTES
+00
+%
+0-1
+BASOPHILS
+RBC.
+Normocytic normochromic.
+WBC.
+Leukocytosis.
+PLATELETS
+Mild thrombocytosis.
+CBP(COMPLETEBLOODPICTURE)(27-04-202103:04)
+14.1
+g/dL
+13.0-17.0
+HAEMOGLOBIN
+4.92
+mill/cumm
+4.5-5.5
+RBC
+43.5
+vol%
+40.0-50.0
+HAEMOTOCRIT(PCV)
+88.6
+f
+83-101
+MCV (MEAN CELLVOLUME)
+28.8
+pg
+27-32
+MCH(MeanCellHaemoglobin)
+7P/6
+31.5-34.5
+MCHC(MEANCELLHAEMOGLOBINCON-32.5
+CENTRATION)
+4.58
+Lakhs/Cumm
+1.5-4.0
+PLATELETCOUNT(PLT)
+13.4
+%
+11.6-14.0
+RDW
+8.5
+f
+7.5-11.5
+MPV
+19200
+Cells/cumm
+4,000-11,000
+WBCCOUNT
+84
+%
+40-80
+POLYMORPHS
+10
+%
+20 -40
+LYMPHOCYTES
+00
+%
+1-6
+EOSINOPHILS
+06
+%
+2-10
+MONOCYTES
+00
+%
+0-1
+BASOPHILS
+RBC.
+Normocytic normochromic
+WBC.
+Neutrophilicleukocytosis.
+PLATELETS
+Thrombocytosis
+CBP(COMPLETEBLOODPICTURE)(28-04-202104:07)
+13.5
+7p/6
+13.0-17.0
+HAEMOGLOBIN
+4.60
+mill/cumm
+4.5-5.5
+RBC
+40.6
+vol%
+40.0 -50.0
+HAEMOTOCRIT(PCV)
+88.2
+f
+83-101
+MCV(MEANCELLVOLUME)
+29.2
+pg
+27-32
+MCH(MeanCellHaemoglobin)
+g/dL
+31.5 -34.5
+MCHC(MEAN CELLHAEMOGLOBIN CON-33.2
+CENTRATION)
+3.94
+Lakhs/Cumm
+1.5 -4.0
+PLATELETCOUNT(PLT)
+13.7
+%
+11.6-14.0
+RDW
+8.2
+f
+7.5-11.5
+MPV
+15700
+Cells/cumm
+4,000-11,000
+WBCCOUNT
+70
+%
+40-80
+POLYMORPHS
+24
+%
+20-40
+LYMPHOCYTES
+00
+%
+1-6
+EOSINOPHILS
+06
+%
+2-10
+MONOCYTES
+00
+%
+0-1
+BASOPHILS
+RBC.
+Normocytic normochromic
+WBC.
+Leukocytosis.
+PLATELETS
+Adequate
+SERUMFERRITIN （17-04-202117:11)
+花
+Page7
+NBAN
+il's warm in here
+OrganizationAccreditedby:
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Telangana,India
+100
+Phone:040-4455 0000 Emergency:8008108108 E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+PatientNo:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender):
+44Y (Male)
+RESULT
+706.03
+AdultMale:20-250ug/L
+Adult Female:10-120 ug/L
+Children:
+Up to 1 month :6-400 ug/L
+1to6months:6-410ug/L
+6 to 12months:6-80 ug/L
+1 to5years:6-60ug/L
+6 to 19years:6-320ug/L
+LDH（17-04-202117:11)
+297.0
+U/L
+<248U/L
+RESULT
+PCTQ(PROCALCITONIN)(17-04-2021 17:11)
+0.051
+ng/ml
+High risk of severe sepsis:>2.0 ng/
+RESULT
+ml
+Lowriskofseveresepsisorseptic
+shock:<0.5ng/ml
+Moderateriskofprogressionto
+severesepsis orseptic shock:>0.5
+to<2.0 ng/ml
+Normalrange:0.025-0.065ng/ml.
+HBA1C(GLYC0SYLATEDHAEMOGLOBIN)(17-04-202117:11)
+%
+Non Diabetic:5-6
+HBA1C
+6.8
+Good Control:6-7
+Fair Control:7-8%
+Poor Control:8-10
+VeryPoorControl:>10
+UREA(17-04-202117:09)
+37
+mg/dl
+17.0 - 43.0 mg/dL
+RESULT
+SERUM CREATININE（17-04-202117:09)
+0.82
+mg/dL
+0.84-1.25 mg/dL
+CREATININE
+108
+mL/min
+90-120
+eGFR
+eGFRInterpretation
+Stagesof KidneyDiseaseforGlomerularFiltrationRate
+Stage 1 Kidney damage(e.g., protein in the urine) with normal GFR :
+90orabove
+Stage2KidneydamagewithmilddecreaseinGFR:60to89
+Stage3aModeratedecreaseinGFR:45to59
+Stage3bModeratedecreaseinGFR:30to44
+Stage4SeverereductioninGFR:15to29
+Stage5Kidneyfailure:Lessthan15
+Note :-This eGFR calculation not valid in children, Pregnant women and patients with Acute kidney Injury (AKI)
+Assume GFR less than 10 ml/min in AKI
+SERUM MAGNESIUM （17-04-202117:09)
+Ip/bu
+1.8 - 2.6 mg/dL
+2.4
+RESULT
+SERUM ELECTROLYTES (17-04-2021 17:09)
+meq/L
+135-150mEq/L
+138.5
+SODIUM
+meq/L
+3.5-5.0 mEq/L
+3.93
+POTASSIUM
+103.2
+meq/L
+94.0-110 mEq/L
+CHLORIDE
+LFT(LIVERFUNCTIONTEST)(17-04-202117:09)
+7p/6w
+0.3-1.2 mg/dL
+0.7
+TOTALBILIRUBIN
+0.2
+mg/dL
+0.0-0.2 mg/dL
+DIRECTBILIRUBIN
+n
+il's warm in here
+ganizationAccreditedby:
+SUNSHINEHOSPITALS
+100
+PGRoad,Paradise,Secunderabad500003,Telangana,India
+Phone:040-44550000Emergency:8008108108E-mail:info@sunshinehospitals.com
+NABH
+ISO
+www.sunshinehospitals.com
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+Patient No:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender ):
+44Y ( Male )
+INDIRECTBILIRUBIN
+0.5
+mg/dL
+SERUMALKALINEPHOSPHATASE
+48
+U/L
+30-120U/L
+SGPT/ALT
+44
+U/L
+<50U/L
+22
+U/L
+<50U/L
+SGOT/AST
+TOTALPROTEIN
+6.4
+g/dL
+6.6 - 8.3 g/dL
+SERUMALBUMIN
+3.5
+g/dL
+3.5 -5.2 g/dL
+SERUMGLOBULIN
+2.9
+g/dL
+1.80-3.60
+AGRATIO
+1.2
+1.2- 1.5
+SERUMPHOSPHOROUS (17-04-202117:09)
+RESULT
+1.5
+IP/6w
+2.5 -4.5 mg/dL
+SERUMCALCIUM (17-04-202117:09)
+8.7
+IP/6u
+8.8-10.6 mg/dL
+RESULT
+TSH (THYROID STIMULATING HORMONE) (17-04-2021 17:09)
+0.14
+ulU/ml
+0.34 -5.60
+TSH
+D DIMER （17-04-202117:11)
+369.1
+0 - 250 ng/ml
+RESULT
+RPG(RANDOM PLASMA GLUCOSE)(17-04-2021 17:09)
+284
+Ip/6u
+80.0-140.0 mg/dL
+RANDOMBLOODGLUCOSE
+CLINICALINTERPRETATION
+<140:Normal
+140-199:Prediabetes
+>=200:DiabetesMellitus
+SERUM ELECTROLYTES (18-04-202101:31)
+SODIUM
+138.2
+meq/L
+135-150mEq/L
+POTASSIUM
+4.20
+meq/L
+3.5 -5.0 mEq/L
+CHLORIDE
+103.3
+meq/L
+94.0-110mEq/L
+IL-6(INTERLUEKIN-6)(18-04-202101:31)
+23.78
+pg/mL
+5.3-7.5 pg/mL.
+RESULT
+IL-6(INTERLUEKIN-6)(19-04-202100:48)
+15.14
+pg/mL
+5.3-7.5 pg/mL.
+RESULT
+SERUMCREATININE （19-04-202100:48)
+0.60
+mg/dL
+0.84-1.25 mg/dL
+CREATININE
+eGFR
+122
+mL/min
+90-120
+eGFRInterpretation
+StagesofKidneyDiseaseforGlomerularFiltrationRate
+Stage 1 Kidney damage (e.g., protein in the urine) with normal GFR :
+90orabove
+Stage2KidneydamagewithmilddecreaseinGFR:60to89
+Stage3aModeratedecreaseinGFR:45to59
+Stage3bModeratedecreaseinGFR:30to44
+Stage4SeverereductioninGFR:15to29
+Stage5Kidneyfailure:Lessthan15
+Note:-ThiseGFRcalculationnotvalid inchildren,Pregnantwomen andpatientswithAcutekidneyInjury(AKI)
+Assume GFRless than 10 ml/min in AKI
+SERUMELECTROLYTES（19-04-202100:48)
+135-150mEq/L
+MRD
+SODIUM
+138.7
+meq/L
+卡
+i's warm in here
+OrganizationAccredited by:
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Telangana,ndia
+100
+Phone:040-44550000Emergency:8008108108E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+Patient No:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender):
+44Y (Male)
+POTASSIUM
+4.11
+meq/L
+3.5 -5.0 mEq/L
+CHLORIDE
+101.7
+meq/L
+94.0-110mEq/L
+UREA（19-04-202100:48)
+49
+1p/6u
+17.0 -43.0 mg/dL
+RESULT
+DDIMER（20-04-202101:08)
+342.9
+0 - 250 ng/ml
+RESULT
+D DIMER （21-04-202101:22)
+282.8
+0 - 250 ng/ml
+RESULT
+UREA（23-04-2021 01:47)
+38
+Ip/6w
+17.0 - 43.0 mg/dL
+RESULT
+SERUMCREATININE（23-04-202101:47)
+0.81
+mg/dL
+0.84-1.25 mg/dL
+CREATININE
+eGFR
+108
+mL/min
+90-120
+eGFRInterpretation
+Stages of Kidney Disease for Glomerular Filtration Rate
+Stage 1 Kidney damage (e.g., protein in the urine) with normal GFR :
+90orabove
+Stage2KidneydamagewithmilddecreaseinGFR:60to89
+Stage3aModeratedecreaseinGFR:45to59
+Stage3bModeratedecreaseinGFR:30to44
+Stage4Severe reduction in GFR:15 to 29
+Stage 5 Kidney failure: Less than 15
+AssumeGFRlessthan10ml/min inAKI
+SERUMPOTASSIUM（23-04-202101:47)
+3.85
+meq/L
+3.5-5.0mEq/L
+RESULT
+SERUMSODIUM（23-04-202101:47)
+RESULT
+137.9
+meq/L
+135-150 mEq/L
+CHLORIDESSERUM （23-04-202101:47)
+CHLORIDE
+100.8
+meq/L
+94.0-110.0 meq/l
+RPG（RANDOMPLASMAGLUCOSE）（23-04-202101:47)
+RANDOMBLOODGLUCOSE
+99
+Ip/6u
+80.0-140.0 mg/dL
+CLINICALINTERPRETATION
+<140:Normal
+140-199:Prediabetes
+>=200:DiabetesMellitus
+DDIMER （23-04-202101:47)
+RESULT
+193.4
+0-250ng/ml
+D DIMER（24-04-202102:00)
+RESULT
+0.30
+<0.50 ug FEU/mL
+CHLORIDES SERUM (27-04-202103:04)
+CHLORIDE
+104.5
+meq/L
+94.0-110.0 meq/
+UREA（27-04-202103:04)
+RESULT
+27
+Ip/6u
+17.0-43.0mg/dL
+SERUM CREATININE （27-04-202103:04)
+Page10of12
+il's warm in here
+ganizationAccreditedby:
+MRD
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Telangana,India
+100
+Phone:040-44550000Emergency:8008108108E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+UMR0731354
+Patient No:
+SS21007765
+atientName:
+Mr.NARESHKUMARBEJJANKY
+Age(Gender):
+44Y (Male)
+CREATININE
+0.68
+mg/dL
+0.84-1.25 mg/dL
+eGFR
+116
+mL/min
+90-120
+eGFRInterpretation
+Stagesof KidneyDiseasefor GlomerularFiltration Rate
+Stage 1 Kidney damage (e.g., protein in the urine) with normal GFR :
+90or above
+Stage 2 Kidney damage with mild decrease in GFR:60 to 89
+Stage 3a Moderate decrease inGFR:45 to 59
+Stage 3bModerate decrease inGFR:30 to44
+Stage 4 Severe reduction in GFR: 15 to 29
+Stage 5 Kidney failure: Less than 15
+Note :- This eGFR calculation not valid in children, Pregnant women and patients with Acute kidney Injury (AKI)
+AssumeGFRlessthan10ml/mininAKI
+SERUMPOTASSIUM （27-04-202103:04)
+4.58
+meq/L
+3.5-5.0mEq/L
+RESULT
+SERUM SODIUM (27-04-202103:04)
+RESULT
+137.3
+meq/L
+135-150mEq/L
+RPG(RANDOMPLASMAGLUCOSE）(27-04-202103:04)
+RANDOMBLOODGLUCOSE
+103
+mg/dl
+80.0-140.0 mg/dL
+CLINICALINTERPRETATION
+<140:Normal
+140-199:Prediabetes
+>=200:DiabetesMellitus
+COURSEIN
+Patientwithabovementionedcomplaints,inviewofpresentepidemiologicalsettings,CTchest
+HOSPITAL*
+wasdone-showingperipheralgroundglassopacities,patientwas admittedtostrictlyisolated
+rooms，COVID-19RTPCRwassentwhichcamepositive.Otherlabsreportedelevatedacute
+phasereactants inhospital patientwas havinghypoxia，treatedwith antivirals，azithromycin，
+steroidsandLMwH,managedwithsupportivecare.
+Induecourespatientwasimproved symptomaticly，oxygenationimproved，afebrileformore
+lowingadvice
+DISCHARGE
+1.Tab.Limcee500mg twice daily x10days
+MEDICATIONS
+(adviceon
+medication till next
+review)
+3.Tab.Ecosprin AV 75/10mg once daily at bedtime x 4weeks
+4.Tab. Pantocid 40mg once daily x 2 weeks
+eforeBeealfaxf
+5.Tab. Predmet 16mg twice daily x 5.days
+Followedby16mgoncedailyx5days
+Followed by 8mg once daily x 5 days and then stop
+6.Tab.Mondeslor10mg oncedaily at 10pmx2weeks
+7.Tab.Amaryl M2 once daily before breakfast x 14 days
+agen
+il's warm in here
+Organization Accredited by:
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003Telangana,ndia
+100
+Phone:040-44550000Emergency:8008108108E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO
+SUNSHINE
+HOSPITALS
+DISCHARGESUMMARY
+UHID:
+Patient No:
+SS21007765
+UMR0731354
+atientName:
+Age(Gender ):
+44Y (Male )
+Mr.NARESHKUMARBEJJANKY
+ADVISEAT
+1.Home.quarentine for 2weeks
+DISCHARGE
+2.Wear N95 mask
+3.Follow hand sanitization measures strictly
+4.incentive spirometry
+EMERGENCY
+Incaseofemergencycontact thisno8008108108,04044550000
+CONDITIONS
+List ef Emergencieswould include the following,but not limited to
+1.Recurrence of presenting complaints
+2.Fever,vomitings,loose motions.
+3.Severe pain abdomen,SOB,Chest pain
+4.Giddiness,Altered consciouness.
+REVIEW
+Review after 14 days with FBS,PPBS to medical OPD.
+Discharge summary
+1.Nurse.
+amane
+explainedby
+Kunett
+2.Discharge summary explained to _M ^( Cu P
+3.Date and time
+Dr.K
+SHANTKUMAR
+GENERALMEDICINE
+Consultanf Internal Medicine
+MBBBS,MD
+1.ln case of Emergency contact :8008108108/040-44550000/040-43444546
+2.Ambulance:-8008656565
+*Generated By S7451on 28/04/202111:10()
+GeneratedByS7451on28/04/202111:10()
+Medical Superintendeny
+SUNSHINE HOSPITAS
+1-7-201 to 205, P.G. Road
+Page 12 of 12
+Beside Paradise Hotel,
+il's warm in here
+SECUNDERABBAD.0?
+Organization Accredited by:
+SUNSHINEHOSPITALS
+PGRoad,Paradise,Secunderabad500003,Telangana,India
+100
+Phone:040-44550000 Emergency:8008108108E-mail:info@sunshinehospitals.com
+www.sunshinehospitals.com
+NABH
+ISO

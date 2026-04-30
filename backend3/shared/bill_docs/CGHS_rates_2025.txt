@@ -1,0 +1,57 @@
+# CGHS Rate List 2025 - Summary
+
+## Implementation Date
+Effective from October 13, 2025
+
+## Room Rent Limits
+- General Ward: Rs 1,500
+- Semi-Private Ward: Rs 3,000
+- Private Ward: Rs 4,500
+
+## Rate Structure and Differentials
+- Non-NABH/Non-NABL HCOs: 15% lower than NABH/NABL accredited hospitals
+- Super Speciality Hospitals: 15% higher than NABH-accredited hospitals
+- City Classification Adjustments:
+  * Y (Tier II) cities: 10% lower than X (Tier I) cities
+  * Z (Tier III) cities: 20% lower than Tier I cities
+- Ward Entitlement Adjustments:
+  * General ward: 5% decrease from semi-private rates
+  * Private ward: 5% increase on semi-private rates
+
+## Consultation and ICU Charges
+- OPD/IPD Consultation: Rs 350 (uniform for NABH and Non-NABH)
+- OPD Super Specialty/Psychiatry Consultation: Rs 700
+- ICU Charges: Rs 5,400 (inclusive of room rent for all ward entitlements)
+
+## Package Rate Definition
+Package rates cover up to:
+- 12 days for Specialized (Super Specialties) treatment
+- 7 days for other Major Surgeries
+- 3 days for Laparoscopic surgeries/elective Angioplasty/normal deliveries
+- 1 day for day care/Minor (OPD) surgeries
+
+## Key Validation Rules
+1. Package rates are all-inclusive: accommodation, medicines, surgery, consultations, investigations, nursing care, ICU charges
+2. Multiple procedures in same OT session:
+   - Primary surgery: 100% of package rate
+   - Second surgery: 50% of package rate
+   - Third & subsequent: 25% of each package rate
+3. Bilateral/identical procedures: Second procedure at 50%
+4. Procedures within package period (same admission): 75% of applicable package rate
+
+## Common Investigations (Semi-Private Ward, NABH, Tier I Cities)
+- Complete Hemogram/CBC: Rs 300
+- Blood Glucose Fasting/PP: Rs 40
+- Serum Creatinine: Rs 100
+- Liver Function Test (LFT): Rs 500
+- Kidney Function Test (KFT): Rs 500
+- Lipid Profile: Rs 490
+- HbA1c: Rs 300
+- Thyroid Function Test (TFT): Rs 450
+- ECG: Rs 100
+- X-Ray Chest PA View: Rs 200
+- Ultrasound Abdomen: Rs 800
+- CT Scan Head Plain: Rs 2,000
+- MRI Brain Plain: Rs 4,500
+
+Note: This is a summary. Full detailed rate list contains thousands of procedures and investigations.

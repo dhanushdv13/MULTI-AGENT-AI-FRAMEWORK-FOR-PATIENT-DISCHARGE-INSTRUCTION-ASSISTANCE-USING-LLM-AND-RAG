@@ -1,0 +1,44 @@
+# FastAPI Healthcare Multi-Agent Backend
+# Core
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+
+# Database
+sqlalchemy>=2.0.0
+aiosqlite>=0.19.0
+
+# Auth
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# LLM & RAG
+langchain>=1.1.0
+langchain-google-genai>=4.0.0
+langchain-community>=0.3.0
+langgraph>=0.4.0
+langgraph-checkpoint>=2.0.0
+langgraph-checkpoint-sqlite>=2.0.0
+
+# Embeddings (free, no API key)
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+
+# Document Processing (already installed)
+rapidocr-onnxruntime>=1.3.0
+pymupdf>=1.24.0
+python-docx>=1.1.0
+opencv-python-headless>=4.10.0
+
+# Web Scraping (medicine prices)
+requests>=2.32.0
+beautifulsoup4>=4.12.0
+
+# Excel parsing (CGHS rates)
+openpyxl>=3.1.0
+pandas>=2.2.0
+
+# Utils
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+python-dotenv>=1.0.0
