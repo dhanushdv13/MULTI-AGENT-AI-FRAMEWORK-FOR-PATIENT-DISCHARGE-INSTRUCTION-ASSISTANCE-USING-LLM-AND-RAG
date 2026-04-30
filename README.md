@@ -321,6 +321,7 @@ http://localhost:3000
 
 ## 📁 7. Project Structure
 
+```
 ai-insurance-agent-dev-phase1/
 │
 ├── backend/
@@ -339,6 +340,7 @@ ai-insurance-agent-dev-phase1/
 │   │   ├── hooks/
 │   │   ├── lib/
 │   │   └── types/
+```
 
 ---
 
@@ -351,3 +353,11 @@ This project demonstrates:
 * ✅ Multi-agent AI architecture
 * ✅ Scalable backend + modern frontend
 * ✅ Real-world healthcare use case
+
+---
+
+If you want, I can also:
+
+* 🔥 Make this **ATS-optimized project description for resume**
+* 🔥 Convert this into **LinkedIn post**
+* 🔥 Add **badges + GitHub styling (icons, shields, screenshots)**
